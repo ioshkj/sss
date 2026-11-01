@@ -233,11 +233,16 @@ def main():
     ok = [r for r in rows if r[3]]
     log("下载通过 %d / %d" % (len(ok), len(rows)))
 
+    # 只保留亚洲常用地区（其余一律不要）
+    ALLOW = {"香港", "台湾", "日本", "韩国", "新加坡", "马来西亚", "泰国",
+             "菲律宾", "越南", "印度尼西亚", "印度", "澳门", "柬埔寨", "澳大利亚"}
     # 按地区分组，组内按下载速度取前 10
     by_region = {}
     for u, q, cf, kbps in ok:
         cc = geo.guess_cc("%s %s" % (q.get("name", ""), q.get("server", "")))
         r = geo.CC_NAME.get(cc, "其他")
+        if r not in ALLOW:
+            continue
         by_region.setdefault(r, []).append((u, q, cf, kbps))
 
     cnt, out, trows = {}, [], []
