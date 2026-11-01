@@ -233,14 +233,21 @@ def main():
     ok = [r for r in rows if r[3]]
     log("下载通过 %d / %d" % (len(ok), len(rows)))
 
-    cnt, out = {}, []
-    trows = []
+    # 按地区分组，组内按下载速度取前 10
+    by_region = {}
     for u, q, cf, kbps in ok:
         cc = geo.guess_cc("%s %s" % (q.get("name", ""), q.get("server", "")))
         r = geo.CC_NAME.get(cc, "其他")
-        cnt[r] = cnt.get(r, 0) + 1
-        out.append(u.split("#")[0] + "#" + (NAME % (r, cnt[r])).replace(" ", "%20"))
-        trows.append((r, q.get("type"), q.get("name", ""), cf, kbps))
+        by_region.setdefault(r, []).append((u, q, cf, kbps))
+
+    cnt, out, trows = {}, [], []
+    for r, items in by_region.items():
+        items.sort(key=lambda x: -x[3])
+        for u, q, cf, kbps in items[:10]:
+            cnt[r] = cnt.get(r, 0) + 1
+            out.append(u.split("#")[0] + "#" + (NAME % (r, cnt[r])).replace(" ", "%20"))
+            trows.append((r, q.get("type"), q.get("name", ""), cf, kbps))
+    log("地区数 %d，输出 %d 条（每地区最多 10）" % (len(by_region), len(out)))
 
     if out:
         open(os.path.join(OUT, "all.xyz"), "w", encoding="utf-8").write(
