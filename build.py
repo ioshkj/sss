@@ -170,22 +170,34 @@ def probe(q, timeout=20):
             p.kill()
 
 
+NODES_URLS = [
+    "https://gh-proxy.org/https://raw.githubusercontent.com/ioshkj/ssr/main/sub/all_nodes.txt.gz",
+    "https://raw.githubusercontent.com/ioshkj/ssr/main/sub/all_nodes.txt.gz",
+]
+
+
+def fetch_all_nodes(tries=3):
+    import gzip
+    for _ in range(tries):
+        for u in NODES_URLS:
+            try:
+                r = subprocess.run(["curl", "-sL", "--max-time", "40", u], capture_output=True)
+                if r.returncode == 0 and len(r.stdout) > 1000:
+                    try:
+                        return gzip.decompress(r.stdout).decode("utf-8", "ignore")
+                    except Exception:
+                        return r.stdout.decode("utf-8", "ignore")
+            except Exception:
+                pass
+        time.sleep(5)
+    return ""
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
-    seen, uris = set(), []
-    for p in SRC + discovered():
-        if not is_fresh(p):
-            continue
-        n = 0
-        for u in lines_of(fetch(p)):
-            k = u.split("#")[0]
-            if k in seen:
-                continue
-            seen.add(k)
-            uris.append(u)
-            n += 1
-        log("  %-46s +%d" % (p.split("/")[-1][:44], n))
-    log("合并 %d 条" % len(uris))
+    raw = fetch_all_nodes()
+    uris = [l.strip() for l in raw.splitlines() if "://" in l]
+    log("从主仓库读取 %d 条节点" % len(uris))
 
     pool, seen_ep = [], set()
     for u in uris:
