@@ -1,11 +1,7 @@
 name: run
 
 on:
-  schedule:
-    - cron: "15,45 * * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: write
