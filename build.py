@@ -233,22 +233,49 @@ def main():
     ok = [r for r in rows if r[3]]
     log("下载通过 %d / %d" % (len(ok), len(rows)))
 
-    # 只保留亚洲常用地区（其余一律不要）
+    # 只保留亚洲：看节点名里的中文地区词，或域名里的地区前缀
     ALLOW = {"香港", "台湾", "日本", "韩国", "新加坡", "马来西亚", "泰国",
              "菲律宾", "越南", "印度尼西亚", "印度", "澳门", "柬埔寨", "澳大利亚"}
+    ASIA_WORDS = ["香港", "台湾", "台北", "日本", "东京", "大阪", "韩国", "首尔",
+                  "新加坡", "狮城", "马来", "吉隆坡", "泰国", "曼谷", "越南",
+                  "印尼", "印尼", "菲律宾", "马尼拉", "印度", "澳门", "柬埔寨"]
+    DOMAIN_HINTS = ["hk", "hkg", "jp", "nrt", "kix", "sg", "sin", "tw", "tpe",
+                    "kr", "icn", "my", "th", "vn", "id", "ph", "in", "mo", "kh"]
+
+    EN2CC = {"hk": "HK", "jp": "JP", "sg": "SG", "tw": "TW", "kr": "KR",
+             "my": "MY", "th": "TH", "vn": "VN", "id": "ID", "ph": "PH",
+             "mo": "MO", "kh": "KH"}
+
+    def asian_region(q):
+        text = ("%s %s" % (q.get("name", ""), q.get("server", ""))).lower()
+        # 英文地区码（HK / JP / SG ...）：出现在名字开头或分隔符后
+        import re as _re
+        for code, cc in EN2CC.items():
+            if _re.search(r"(^|[\s\-_|\[（(])%s(\d|[\s\-_|\]）)]|$)" % code, text):
+                return geo.CC_NAME.get(cc, "其他")
+        for w in ASIA_WORDS:
+            if w in text:
+                cc = geo.guess_cc(w)
+                return geo.CC_NAME.get(cc, "其他")
+        host = str(q.get("server", "")).lower()
+        first = host.split(".")[0] if "." in host else host
+        for h in DOMAIN_HINTS:
+            if first.startswith(h) or ("-" + h) in first or ("_" + h) in first:
+                cc = geo.guess_cc(h)
+                return geo.CC_NAME.get(cc, "其他")
+        return None
     # 按地区分组，组内按下载速度取前 10
     by_region = {}
     for u, q, cf, kbps in ok:
-        cc = geo.guess_cc("%s %s" % (q.get("name", ""), q.get("server", "")))
-        r = geo.CC_NAME.get(cc, "其他")
-        if r not in ALLOW:
+        r = asian_region(q)
+        if not r or r not in ALLOW:
             continue
         by_region.setdefault(r, []).append((u, q, cf, kbps))
 
     cnt, out, trows = {}, [], []
     for r, items in by_region.items():
         items.sort(key=lambda x: -x[3])
-        for u, q, cf, kbps in items[:10]:
+        for u, q, cf, kbps in items[:20]:
             cnt[r] = cnt.get(r, 0) + 1
             out.append(u.split("#")[0] + "#" + (NAME % (r, cnt[r])).replace(" ", "%20"))
             trows.append((r, q.get("type"), q.get("name", ""), cf, kbps))
