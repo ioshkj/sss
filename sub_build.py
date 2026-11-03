@@ -387,6 +387,8 @@ def main():
             continue
         if junk_host(q.get("server")):
             continue
+        if not asia_marker(q.get("name", ""), q.get("server", "")):
+            continue          # 只要亚太
         ep = (str(q["server"]).lower(), int(q["port"]))
         if ep in seen_ep:
             continue
@@ -407,12 +409,16 @@ def main():
                 "OK" if r["dl"] else "X"))
 
     # ④ 表格
-    # ⑤ 纠正名字：用测出来的真实出口地区命名
+    # ⑤ 只要亚太（按测出来的真实出口），再命名
+    ASIA = {"香港", "台湾", "日本", "韩国", "新加坡", "马来西亚", "泰国",
+            "菲律宾", "越南", "印度尼西亚", "印度", "澳门", "柬埔寨", "澳大利亚"}
     rows, cnt_nm = [], {}
     for i, (u, q) in enumerate(pool):
         r = results[i]
         cc = r["cc"] or geo.guess_cc("%s %s" % (q.get("name", ""), q.get("server", "")))
         rn = geo.CC_NAME.get(cc, "其他") if cc else "其他"
+        if rn not in ASIA:
+            continue
         cnt_nm[rn] = cnt_nm.get(rn, 0) + 1
         nm = NAME % (rn, cnt_nm[rn])
         rows.append({
