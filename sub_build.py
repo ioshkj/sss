@@ -463,7 +463,7 @@ def main():
         out.append(fix_http_auth(row["uri"].split("#")[0]) + "#" +
                    row["q"]["name"].replace(" ", "%20"))
     if out:
-        open(os.path.join(OUT, "sss.xyz"), "w", encoding="utf-8").write(
+        open(os.path.join(OUT, "sss"), "w", encoding="utf-8").write(
             base64.b64encode("\n".join(out).encode()).decode())
     log("写入 0070077.xyz：%d 条" % len(out))
 
