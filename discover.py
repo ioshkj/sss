@@ -15,9 +15,41 @@ QUERIES = [
     "proxy+sub+clash", "免费节点", "机场订阅", "free+vless+nodes",
     "vmess+free+sub", "trojan+free+sub", "clash+yaml+proxy", "代理+订阅",
     "v2ray+configs", "shadowrocket+sub", "singbox+subscription", "proxy+pool",
+    # 针对 http / anytls / trojan 这类少而精的节点
+    "anytls", "anytls+sub", "anytls+nodes", "anytls+subscription",
+    "trojan+subscription", "trojan+nodes", "trojan+clash",
+    "http+proxy+list", "https+proxy+nodes", "http+proxy+sub",
 ]
 COMMON = ["sub", "sub.txt", "sub.yaml", "base64.txt", "clash.yaml", "all.yaml",
           "nodes.txt", "list.yml", "list.txt", "output/clash.yaml"]
+
+
+BLOCKED = ("TheCrowCreature/v2rayExtractor", "nyeinkokoaung404/V2ray-Configs")
+
+
+
+NODE_SCHEMES = ("vmess://", "vless://", "trojan://", "ss://", "ssr://",
+                "hysteria2://", "hy2://", "tuic://", "anytls://",
+                "http://", "https://", "socks5://")
+
+
+def looks_like_nodes(raw, min_nodes=3):
+    """内容是不是真的节点订阅：base64 里或明文里含至少 N 条代理链接"""
+    if not raw or len(raw) < 80:
+        return False
+    text = raw.decode("utf-8", "ignore")
+    if "proxies:" in text:          # clash 配置
+        return text.count("- name") >= min_nodes or text.count("server:") >= min_nodes
+    if "://" in text:
+        n = sum(1 for line in text.splitlines() if line.strip().startswith(NODE_SCHEMES))
+        return n >= min_nodes
+    try:
+        import base64 as _b64
+        dec = _b64.b64decode(text + "=" * (-len(text) % 4)).decode("utf-8", "ignore")
+        n = sum(1 for line in dec.splitlines() if line.strip().startswith(NODE_SCHEMES))
+        return n >= min_nodes
+    except Exception:
+        return False
 
 
 def log(m):
@@ -46,7 +78,7 @@ def fetch(url, timeout=12):
 
 
 def main():
-    since = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=30))
+    since = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=24))
     q_since = since.strftime("%Y-%m-%dT%H:%M:%SZ")
     repos = {}
     for q in QUERIES:
@@ -81,6 +113,8 @@ def main():
 
     found = []
     for repo, meta in sorted(repos.items(), key=lambda kv: -kv[1]["stars"])[:120]:
+        if repo in BLOCKED:
+            continue
         branch = meta["branch"]
         paths = []
         body = fetch(RAW + "%s/%s/README.md" % (repo, branch))
@@ -96,6 +130,8 @@ def main():
                         paths.append(p)
         for p in (paths or COMMON)[:5]:
             b = fetch(RAW + "%s/%s/%s" % (repo, branch, p))
+            if not looks_like_nodes(b):
+                continue
             if len(b) > 400 and b"<html" not in b[:200].lower():
                 found.append({"repo": repo, "branch": branch, "path": p,
                               "kind": "clash" if p.lower().endswith((".yaml", ".yml")) else "uri",
@@ -116,9 +152,9 @@ def main():
         if x["fails"] >= 3:
             continue
         merged[k] = x
-    # 独立的新鲜度检测：超过 30 小时没更新的源直接丢弃
+    # 独立的新鲜度检测：超过 24 小时没更新的源直接丢弃
     import datetime as _dt
-    cutoff = _dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=30)
+    cutoff = _dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(hours=24)
     keep, dropped = [], 0
     for x in merged.values():
         try:
@@ -130,7 +166,7 @@ def main():
             keep.append(x)
         else:
             dropped += 1
-    log("新鲜度检测：丢弃 %d 个超过 30 小时未更新的源" % dropped)
+    log("新鲜度检测：丢弃 %d 个超过 24 小时未更新的源" % dropped)
     # 备份一份，防止意外清空
     try:
         import shutil as _sh

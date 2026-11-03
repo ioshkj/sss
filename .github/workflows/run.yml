@@ -1,7 +1,11 @@
 name: run
 
 on:
+  schedule:
+    - cron: "25 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
@@ -15,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-    timeout-minutes: 180
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,17 +27,28 @@ jobs:
           python-version: "3.12"
       - name: deps
         run: |
-          pip install -q pyyaml
+          pip install -q pyyaml || true
           mkdir -p bin
-          curl -sL --retry 3 -o bin/mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz
-          gunzip -f bin/mihomo.gz && chmod +x bin/mihomo
+          for u in "https://gh-proxy.org/https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz" "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz"; do
+            curl -sL --retry 2 --max-time 120 -o bin/mihomo.gz "$u" && [ -s bin/mihomo.gz ] && break
+            sleep 3
+          done
+          gunzip -f bin/mihomo.gz && chmod +x bin/mihomo && ./bin/mihomo -v
+      - name: discover
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -u discover.py $(date -u -d '2 days ago' +%Y-%m-%d) 2>&1 | tail -5 || true
       - name: build
-        run: python -u build.py 2>&1 | tee build.log || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -u sub_build.py 2>&1 | tee build.log || true
       - name: save
+        if: always()
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
           git add -f build.log 2>/dev/null || true
           git add -A sub/ 2>/dev/null || true
+          git add -f sources.json 2>/dev/null || true
           git commit -q -m "update" 2>/dev/null || true
           for i in 1 2 3; do git push -q && break; sleep 5; done
