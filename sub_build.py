@@ -392,14 +392,6 @@ def main():
             continue
         seen_ep.add(ep)
         pool.append((u, q))
-    # http/https/anytls 全部保留；trojan 补位，总数不超过 2000
-    pri = [x for x in pool if x[1].get("type") in ("http", "anytls")]
-    tro = [x for x in pool if x[1].get("type") == "trojan"]
-    room = max(0, 2000 - len(pri))
-    if len(tro) > room:
-        log("总数限 2000：http/anytls %d 条，trojan 从 %d 切到 %d 条" % (len(pri), len(tro), room))
-        tro = tro[:room]
-    pool = pri + tro
     log("去重后目标类型 %d 条" % len(pool))
 
     # ④ 测试（一次内核测全部指标）
