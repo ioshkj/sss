@@ -364,8 +364,8 @@ def main():
         if not is_fresh(p, 24):
             continue
         got = lines_of(fetch(p))
-        if len(got) > 1000:
-            log("  %-46s 跳过（%d 条，超过 1000）" % (p.split("/")[-1][:44], len(got)))
+        if len(got) > 800:
+            log("  %-46s 跳过（%d 条，超过 800）" % (p.split("/")[-1][:44], len(got)))
             continue
         n = 0
         for u in got:
