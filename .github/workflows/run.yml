@@ -2,7 +2,7 @@ name: run
 
 on:
   schedule:
-    - cron: "25 * * * *"
+    - cron: "5,35 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
