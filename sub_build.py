@@ -9,7 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "sub")
 BIN = os.path.join(HERE, "bin", "mihomo")
 NAME = "%s-%02d 0070077.xyz"
-# 主仓库只管 http/anytls/trojan，这里专门测它们之外的协议
+# 主仓库只管 http/anytls，这里收 trojan 和其他协议
 SKIP_TYPES = ("http", "anytls")
 CF = "http://cp.cloudflare.com/generate_204"
 GOOGLE = "https://www.gstatic.com/generate_204"
@@ -122,7 +122,8 @@ FLAGS = {"🇭🇰": "HK", "🇹🇼": "TW", "🇯🇵": "JP", "🇰🇷": "KR",
          "🇲🇾": "MY", "🇹🇭": "TH", "🇻🇳": "VN", "🇮🇩": "ID", "🇵🇭": "PH",
          "🇮🇳": "IN", "🇲🇴": "MO", "🇰🇭": "KH", "🇦🇺": "AU"}
 EN2CC = {"HK": "HK", "JP": "JP", "SG": "SG", "TW": "TW", "KR": "KR",
-         "MO": "MO", "KH": "KH"}
+         "MO": "MO", "KH": "KH", "TH": "TH", "MY": "MY", "VN": "VN",
+         "ID": "ID", "PH": "PH", "IN": "IN", "AU": "AU"}
 
 
 def asia_marker(name, server):
@@ -324,7 +325,7 @@ def profile(q):
             out["jit"] = max(samples) - min(samples) if len(samples) > 1 else 0
             out["gg"] = curl_ms(port, GOOGLE)
             out["yt"] = curl_ms(port, YT)
-            # 下载测 3 次：至少 2 次成功，取成功值的中位数
+            # 下载测 3 次：成功 1 次即通过
             res = [v for v in (curl_dl(port) for _ in range(3)) if v]
             if res:
                 res.sort()
@@ -469,7 +470,7 @@ def main():
     if out:
         open(os.path.join(OUT, "sss"), "w", encoding="utf-8").write(
             base64.b64encode("\n".join(out).encode()).decode())
-    log("写入 0070077.xyz：%d 条" % len(out))
+    log("写入 sss：%d 条" % len(out))
 
     open(os.path.join(OUT, "report.txt"), "w", encoding="utf-8").write(
         "更新 %s\n抓取 %d / 去重后 %d / 可用 %d / 输出 %d\n" % (
