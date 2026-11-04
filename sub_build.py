@@ -10,7 +10,7 @@ OUT = os.path.join(HERE, "sub")
 BIN = os.path.join(HERE, "bin", "mihomo")
 NAME = "%s-%02d 0070077.xyz"
 # 主仓库只管 http/anytls/trojan，这里专门测它们之外的协议
-SKIP_TYPES = ("http", "anytls", "trojan")
+SKIP_TYPES = ("http", "anytls")
 CF = "http://cp.cloudflare.com/generate_204"
 GOOGLE = "https://www.gstatic.com/generate_204"
 YT = "https://i.ytimg.com/generate_204"
