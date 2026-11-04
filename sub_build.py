@@ -118,6 +118,9 @@ def discovered():
 ASIA_WORDS = ["香港", "台湾", "台北", "日本", "东京", "大阪", "韩国", "首尔",
               "新加坡", "狮城", "马来", "吉隆坡", "泰国", "曼谷", "越南",
               "印尼", "菲律宾", "马尼拉", "印度", "澳门", "柬埔寨"]
+FLAGS = {"🇭🇰": "HK", "🇹🇼": "TW", "🇯🇵": "JP", "🇰🇷": "KR", "🇸🇬": "SG",
+         "🇲🇾": "MY", "🇹🇭": "TH", "🇻🇳": "VN", "🇮🇩": "ID", "🇵🇭": "PH",
+         "🇮🇳": "IN", "🇲🇴": "MO", "🇰🇭": "KH", "🇦🇺": "AU"}
 EN2CC = {"HK": "HK", "JP": "JP", "SG": "SG", "TW": "TW", "KR": "KR",
          "MO": "MO", "KH": "KH"}
 
@@ -126,6 +129,9 @@ def asia_marker(name, server):
     """名字里出现中文地区词，或大写地区码；域名前缀是地区码"""
     import re as _re
     nm = name or ""
+    for flag in FLAGS:
+        if flag in nm:
+            return True
     for w in ASIA_WORDS:
         if w in nm:
             return True
@@ -320,10 +326,10 @@ def profile(q):
             out["yt"] = curl_ms(port, YT)
             # 下载测 3 次：至少 2 次成功，取成功值的中位数
             res = [v for v in (curl_dl(port) for _ in range(3)) if v]
-            if len(res) >= 2:
+            if res:
                 res.sort()
-                # 3 次成功取中间；2 次成功取较小的（保守）
-                out["dl"] = res[1] if len(res) >= 3 else res[0]
+                # 1 次取该值；2 次取较小；3 次取中间
+                out["dl"] = res[0] if len(res) == 1 else (res[0] if len(res) == 2 else res[1])
             else:
                 out["dl"] = None
             out["udp"] = udp_via(port)
@@ -364,8 +370,8 @@ def main():
         if not is_fresh(p, 24):
             continue
         got = lines_of(fetch(p))
-        if len(got) > 800:
-            log("  %-46s 跳过（%d 条，超过 800）" % (p.split("/")[-1][:44], len(got)))
+        if len(got) > 1000:
+            log("  %-46s 跳过（%d 条，超过 1000）" % (p.split("/")[-1][:44], len(got)))
             continue
         n = 0
         for u in got:
