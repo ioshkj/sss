@@ -327,14 +327,9 @@ def profile(q):
                 return out
             out["gg"] = curl_ms(port, GOOGLE)
             out["yt"] = curl_ms(port, YT)
-            # 下载测 3 次：成功 1 次即通过
-            res = [v for v in (curl_dl(port) for _ in range(3)) if v]
-            if res:
-                res.sort()
-                # 1 次取该值；2 次取较小；3 次取中间
-                out["dl"] = res[0] if len(res) == 1 else (res[0] if len(res) == 2 else res[1])
-            else:
-                out["dl"] = None
+            # 下载测 3 次：必须 3 次全成功，取最小速度
+            res = [curl_dl(port) for _ in range(3)]
+            out["dl"] = min(res) if all(res) else None
             out["udp"] = udp_via(port)
     finally:
         p.terminate()
