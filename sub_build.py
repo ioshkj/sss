@@ -323,6 +323,8 @@ def profile(q):
         if samples:
             out["cf"] = min(samples)
             out["jit"] = max(samples) - min(samples) if len(samples) > 1 else 0
+            if out["cf"] > 3000:      # CF 延迟超过 3000ms 直接判死
+                return out
             out["gg"] = curl_ms(port, GOOGLE)
             out["yt"] = curl_ms(port, YT)
             # 下载测 3 次：成功 1 次即通过
