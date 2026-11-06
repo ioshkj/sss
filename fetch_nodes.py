@@ -102,6 +102,17 @@ def discovered():
     return out
 
 
+JUNK_HOSTS = ("t.me", "telegram.me", "telegram.org", "localhost", "127.0.0.1",
+              "0.0.0.0", "example.com", "example.org", "test.com")
+
+
+def junk_host(server):
+    h = str(server or "").strip().lower()
+    if not h or " " in h or "://" in h:
+        return True
+    return h in JUNK_HOSTS
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     seen, uris = set(), []
@@ -130,6 +141,8 @@ def main():
         except Exception:
             q = None
         if not q or q.get("type") in SKIP_TYPES:
+            continue
+        if junk_host(q.get("server")):
             continue
         ep = (str(q["server"]).lower(), int(q["port"]))
         if ep in seen_ep:

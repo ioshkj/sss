@@ -18,6 +18,71 @@ def log(m):
     print(m, flush=True)
 
 
+
+BIN = os.path.join(HERE, "bin", "mihomo")
+
+
+def start_kernel(q):
+    import json as _json, socket as _sock, subprocess as _sp, tempfile as _tf, time as _t
+    import urllib.request as _ur
+    wd = _tf.mkdtemp(prefix="p-")
+    a, b = _sock.socket(), _sock.socket()
+    a.bind(("127.0.0.1", 0)); b.bind(("127.0.0.1", 0))
+    api, mix = a.getsockname()[1], b.getsockname()[1]
+    a.close(); b.close()
+    cfg = {"mixed-port": mix, "external-controller": "127.0.0.1:%d" % api,
+           "log-level": "warning", "mode": "rule",
+           "proxies": [dict(q, name="p")], "rules": ["MATCH,p"]}
+    path = os.path.join(wd, "c.yaml")
+    open(path, "w").write(_json.dumps(cfg, ensure_ascii=False))
+    p = _sp.Popen([BIN, "-d", wd, "-f", path], stdout=_sp.DEVNULL, stderr=_sp.DEVNULL)
+    for _ in range(30):
+        _t.sleep(0.2)
+        try:
+            _ur.urlopen("http://127.0.0.1:%d/version" % api, timeout=1).read()
+            return p, mix
+        except Exception:
+            if p.poll() is not None:
+                return p, None
+    return p, None
+
+
+def curl_ip(port, timeout=10):
+    import subprocess as _sp
+    r = _sp.run(["curl", "-s", "--max-time", str(timeout),
+                 "-x", "http://127.0.0.1:%d" % port,
+                 "http://ip-api.com/json/?fields=query,countryCode"],
+                capture_output=True, text=True)
+    try:
+        d = json.loads(r.stdout or "{}")
+        return d.get("query"), (d.get("countryCode") or "").upper() or None
+    except Exception:
+        return None, None
+
+
+def exit_cc(q):
+    """通过节点查真实出口国家码，最多试 2 次"""
+    p, port = start_kernel(q)
+    if port is None:
+        try:
+            p.terminate()
+        except Exception:
+            pass
+        return None, None
+    try:
+        for _ in range(2):
+            ip, cc = curl_ip(port)
+            if cc:
+                return ip, cc
+        return None, None
+    finally:
+        p.terminate()
+        try:
+            p.wait(3)
+        except Exception:
+            p.kill()
+
+
 def region_rank(r):
     return (PREFER.index(r) if r in PREFER else 99, r)
 
@@ -36,10 +101,13 @@ def main():
     proxies = [p for p in (doc.get("proxies") or []) if isinstance(p, dict)]
     log("subs-check 通过 %d 条" % len(proxies))
 
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        ccs = list(ex.map(lambda p: exit_cc(p), proxies))
+    log("查到出口 IP %d / %d" % (sum(1 for _, c in ccs if c), len(proxies)))
+
     rows, cnt = [], {}
-    for p in proxies:
-        nm = str(p.get("name", ""))
-        cc = geo.guess_cc("%s %s" % (nm, p.get("server", "")))
+    for p, (ip, cc) in zip(proxies, ccs):
         rn = geo.CC_NAME.get(cc, "其他") if cc else "其他"
         if rn not in ASIA:
             continue
