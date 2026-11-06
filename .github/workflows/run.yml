@@ -26,33 +26,46 @@ jobs:
         with:
           python-version: "3.12"
       - name: deps
-        run: |
-          pip install -q pyyaml || true
-          mkdir -p bin
-          for u in "https://gh-proxy.org/https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz" "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz"; do
-            curl -sL --retry 2 --max-time 120 -o bin/mihomo.gz "$u" && [ -s bin/mihomo.gz ] && break
-            sleep 3
-          done
-          gunzip -f bin/mihomo.gz && chmod +x bin/mihomo && ./bin/mihomo -v
+        run: pip install -q pyyaml || true
       - name: discover
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -u discover.py $(date -u -d '2 days ago' +%Y-%m-%d) 2>&1 | tail -5 || true
-      - name: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -u sub_build.py 2>&1 | tee build.log || true
+      - name: 抓候选节点
+        run: python -u fetch_nodes.py 2>&1 | tee fetch.log || true
+      - name: 起本地源
+        run: |
+          (cd input && nohup python3 -m http.server 8899 --bind 127.0.0.1 >/dev/null 2>&1 &)
+          for _ in $(seq 1 10); do curl -fsS http://127.0.0.1:8899/nodes.txt -o /dev/null && break; sleep 1; done
+      - name: subs-check 测活测速
+        run: |
+          IMAGE="ghcr.io/beck-8/subs-check:latest"
+          docker rm -f subs-check >/dev/null 2>&1 || true
+          docker run -d --name subs-check --network host \
+            -e TZ=Asia/Shanghai \
+            -v "$PWD/config:/app/config" \
+            -v "$PWD/output:/app/output" \
+            "$IMAGE" >/dev/null
+          START=$(date +%s)
+          while [ $(( $(date +%s) - START )) -lt 3300 ]; do
+            if [ -f output/all.yaml ]; then echo "产出 all.yaml，用时 $(( $(date +%s) - START ))s"; break; fi
+            if [ "$(docker inspect -f '{{.State.Running}}' subs-check 2>/dev/null || echo false)" != "true" ]; then echo "容器退出"; break; fi
+            sleep 20
+          done
+          docker logs --tail 60 subs-check 2>&1 | tee check.log || true
+          docker stop -t 30 subs-check >/dev/null 2>&1 || true
+      - name: 生成订阅
+        run: python -u convert.py 2>&1 | tee convert.log || true
       - name: save
         if: always()
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
-          git add -f build.log 2>/dev/null || true
+          git add -f fetch.log check.log convert.log 2>/dev/null || true
           git add -A sub/ 2>/dev/null || true
           git add -f sources.json 2>/dev/null || true
           git commit -q -m "update" 2>/dev/null || true
           for i in 1 2 3; do git push -q && break; sleep 5; done
-
       - name: next
         if: success()
         env:
@@ -67,4 +80,3 @@ jobs:
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/run.yml/dispatches" \
             -d '{"ref":"main"}')
           echo "dispatch http=$code"
-          cat /tmp/r.txt || true
