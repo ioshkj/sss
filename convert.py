@@ -83,6 +83,46 @@ def exit_cc(q):
             p.kill()
 
 
+
+# ---- 线路评分（推断：线路质量/协议特征，不代表是否被墙）----
+import ipaddress, re
+
+CF_NETS = [ipaddress.ip_network(n) for n in (
+    "104.16.0.0/13", "172.64.0.0/13", "162.158.0.0/15", "188.114.96.0/20",
+    "190.93.240.0/20", "197.234.240.0/22", "198.41.128.0/17",
+    "173.245.48.0/20", "103.21.244.0/22")]
+GOOD_NAME = re.compile(r"CN2|GIA|IEPL|IPLC|BGP|中转|专线|优化|直连|9929|4809|58807", re.I)
+BAD_NAME = re.compile(r"CF|Cloudflare|免费|公网", re.I)
+GOOD_PORT = {443, 8443, 2053, 2083, 2087, 2096}
+PROTO_BONUS = {"vless": 1, "trojan": 1, "hysteria2": 1, "tuic": 1, "ss": 0, "vmess": 0, "ssr": 0}
+
+
+def is_cf(server):
+    try:
+        ip = ipaddress.ip_address(str(server))
+    except ValueError:
+        return False
+    return any(ip in n for n in CF_NETS)
+
+
+def score(p):
+    s = 0
+    t = str(p.get("type", "")).lower()
+    s += PROTO_BONUS.get(t, 0)
+    if p.get("reality-opts") or str(p.get("flow", "")).startswith("xtls-rprx-vision"):
+        s += 2
+    if isinstance(p.get("port"), int) and p["port"] in GOOD_PORT:
+        s += 1
+    if is_cf(p.get("server", "")):
+        s -= 3
+    nm = str(p.get("name", ""))
+    if GOOD_NAME.search(nm):
+        s += 2
+    if BAD_NAME.search(nm) and not is_cf(p.get("server", "")):
+        s -= 1
+    return s
+
+
 def region_rank(r):
     return (PREFER.index(r) if r in PREFER else 99, r)
 
@@ -106,8 +146,11 @@ def main():
         ccs = list(ex.map(lambda p: exit_cc(p), proxies))
     log("查到出口 IP %d / %d" % (sum(1 for _, c in ccs if c), len(proxies)))
 
+    high = [(p, ip, cc) for p, (ip, cc) in zip(proxies, ccs) if score(p) >= 4]
+    log("线路评分「高」的节点：%d" % len(high))
+
     rows, cnt = [], {}
-    for p, (ip, cc) in zip(proxies, ccs):
+    for p, ip, cc in high:
         rn = geo.CC_NAME.get(cc, "其他") if cc else "其他"
         if rn not in ASIA:
             continue
