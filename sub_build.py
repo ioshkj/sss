@@ -14,7 +14,7 @@ SKIP_TYPES = ("http", "anytls")
 CF = "http://cp.cloudflare.com/generate_204"
 GOOGLE = "https://www.gstatic.com/generate_204"
 YT = "https://i.ytimg.com/generate_204"
-DL = "https://speed.cloudflare.com/__down?bytes=300000"
+DL = "https://speed.cloudflare.com/__down?bytes=100000"
 
 BLOCKED = ()
 
@@ -216,7 +216,7 @@ def curl_ms(port, url, timeout=15):
     return int(v * 1000) if v > 0 else None
 
 
-def curl_dl(port, timeout=25, bytes_=300000):
+def curl_dl(port, timeout=25, bytes_=100000):
     r = subprocess.run(["curl", "-s", "-o", "/dev/null", "--max-time", str(timeout),
                         "-x", "http://127.0.0.1:%d" % port,
                         "-w", "%{http_code} %{size_download} %{speed_download}",
