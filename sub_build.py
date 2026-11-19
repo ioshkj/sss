@@ -393,8 +393,8 @@ def main():
             continue
         seen_ep.add(ep)
         pool.append((u, q))
-    if len(pool) > 3888:
-        log("待测节点过多（%d），只取前 3888 条" % len(pool))
+    if len(pool) > 5000:
+        log("待测节点过多（%d），只取前 5000 条" % len(pool))
         pool = pool[:3888]
     log("去重后目标类型 %d 条" % len(pool))
 
