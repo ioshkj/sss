@@ -312,13 +312,11 @@ def profile(q):
             pass
         return out
     try:
-        # 先查出口 IP：最多试 2 次，都查不到就放弃
+        # 先查出口 IP：最多试 2 次；查不到也继续（后面用名字猜地区）
         for _ in range(2):
             out["ip"], out["cc"] = curl_ip(port)
             if out["cc"]:
                 break
-        if not out["cc"]:
-            return out
         samples = [v for v in (curl_ms(port, CF) for _ in range(3)) if v]
         if samples:
             out["cf"] = min(samples)
@@ -425,7 +423,7 @@ def main():
         nm = NAME % (rn, cnt_nm[rn])
         rows.append({
             "uri": u, "q": dict(q, name=nm), "r": r, "cc": cc or "-", "region": rn,
-            "ok": bool(r["dl"]) and bool(r["cc"]),
+            "ok": bool(r["dl"]),
         })
     log("名字已按真实地区纠正")
 
