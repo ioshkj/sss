@@ -427,6 +427,18 @@ def main():
         })
     log("名字已按真实地区纠正")
 
+    # 失败的节点（X）单独出一份，方便对比排查
+    fails = [row for row in rows if not row["ok"]]
+    fails.sort(key=lambda x: (region_rank(x["region"]), x["q"].get("name", "")))
+    if fails:
+        fout = []
+        for row in fails:
+            fout.append(row["uri"].split("#")[0] + "#" +
+                        (row["q"]["name"].replace(" ", "%20")))
+        open(os.path.join(OUT, "fail.xyz"), "w", encoding="utf-8").write(
+            base64.b64encode("\n".join(fout).encode()).decode())
+    log("写入 fail.xyz：%d 条（测试失败）" % len(fails))
+
     # 表格只保留进入订阅的节点，并按订阅同样的规则排序
     rows = [row for row in rows if row["ok"]]
     rows.sort(key=lambda x: (region_rank(x["region"]), x["q"].get("name", "")))
