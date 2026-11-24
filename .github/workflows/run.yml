@@ -54,7 +54,7 @@ jobs:
           for i in 1 2 3; do git push -q && break; sleep 5; done
 
       - name: next
-        if: success()
+        if: always()
         env:
           PAT: ${{ secrets.PAT_TOKEN }}
         run: |
