@@ -1,595 +1,579 @@
-  sub                                            +6
-  sub                                            +10
+  sub                                            +7
+  sub                                            +66
   nodes.txt                                      +28
   cfmem.txt                                      +19
   base64.txt                                     +3
   v2ray.txt                                      +7
-  v2ray-2.txt                                    +58
+  v2ray-2.txt                                    +55
   v2ray                                          +113
-  sub.yaml                                       +6
+  sub.yaml                                       +0
   mihomo.yaml                                    +3
   all.yaml                                       +0
   clash.yaml                                     +20
   sub                                            +0
   sb.sh                                          +136
-  list.txt                                       +332
+  list.txt                                       +333
   clash.yaml                                     +27
-  v.txt                                          +372
+  v.txt                                          +371
   clash.config.yaml                              跳过（2925 条，超过 2500）
   sing-box.sh                                    +81
   list.txt                                       +50
-  clashmeta.txt                                  +1527
+  clashmeta.txt                                  +1524
   All_Configs_Sub.txt                            跳过（8605 条，超过 2500）
   clash                                          +17
   clash-meta-2.yaml                              +54
-  all.txt                                        +847
+  all.txt                                        +1509
   all.yaml                                       +0
   SSTime                                         +33
-  top100.txt                                     +74
+  top100.txt                                     +79
   clash.yml                                      +7
   v2                                             +201
   all_sub.txt                                    跳过（4001 条，超过 2500）
   end-gfw-free                                   +6
-  ss.txt                                         +1327
+  ss.txt                                         +1319
   nodes.txt                                      +0
   alive-fast                                     +17
-  Z.txt                                          +572
+  Z.txt                                          +573
   sub.txt                                        跳过（4923 条，超过 2500）
   clash.yaml                                     +115
   proxies.txt                                    +7
   vless                                          +446
   sub.txt                                        +4
-  clash_sub.yaml                                 +267
+  clash_sub.yaml                                 +265
   mixed                                          跳过（8255 条，超过 2500）
-  All-DukeMehdi-Configs.txt                      +1116
-  mix.txt                                        +277
-  AllConfigsSub.txt                              +306
+  All-DukeMehdi-Configs.txt                      +1117
+  mix.txt                                        +289
+  AllConfigsSub.txt                              +305
   subscription-1.txt                             +76
   port_80.txt                                    +409
   clash_config.yaml                              +0
-  mix.txt                                        +1121
-  top.txt                                        +868
+  mix.txt                                        +1157
+  top.txt                                        +864
   vless.txt                                      +0
-  all_servers.txt                                +452
+  all_servers.txt                                +755
   mix-base64.txt                                 跳过（10000 条，超过 2500）
   rasool083-sub.yaml                             +5
   kizyakbeta8.txt                                +151
   sub1.txt                                       +18
+  clash.yaml                                     +625
   ConfigSub_list.txt                             +0
-  clash.yaml                                     +641
-抓取 12232 条
-去重后目标类型 529 条
+抓取 13266 条
+去重后目标类型 513 条
 开始测试，6 并发…
-    1/529 🇭🇰 香港 阿里云            ss      cf=-      dl=-      X
-    2/529 🇭🇰 香港 葵兴数据中心         trojan  cf=-      dl=-      X
-    3/529 🇯🇵 日本|@ripaojiedian  trojan  cf=-      dl=-      X
-    4/529 🇻🇳 越南|@ripaojiedian  trojan  cf=-      dl=-      X
-    5/529 JP - zhuhai.uk       vless   cf=-      dl=-      X
-    6/529 SG - zhuhai.uk       vless   cf=-      dl=-      X
-    7/529 SG - zhuhai.uk 02    vless   cf=-      dl=-      X
-    8/529 🇯🇵_JP_日本_IPV4        vless   cf=-      dl=-      X
-    9/529 🇸🇬_SG_新加坡_IPV4       vless   cf=-      dl=-      X
-   10/529 🇭🇰HK_1|3.2MB/s       vless   cf=-      dl=-      X
-   11/529 🇭🇰HK_2|1.5MB/s       vless   cf=-      dl=-      X
-   12/529 🇸🇬_SG_新加坡_IPV4       trojan  cf=-      dl=-      X
-   13/529 🇸🇬_SG_新加坡_IPV4 (2)   trojan  cf=-      dl=-      X
-   14/529 🇭🇰 香港 | HKG          vless   cf=3999   dl=4      OK
-   15/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   16/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   17/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   18/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   19/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   20/529 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
-   21/529 🇯🇵 日本 | JPN          hysteria2 cf=298    dl=7      OK
-   22/529 🇰🇷 韩国 | KOR          ss      cf=272    dl=113    OK
-   23/529 🇰🇷 韩国 | KOR          ss      cf=266    dl=48     OK
-   24/529                      vmess   cf=418    dl=105    OK
-   25/529 🇰🇷 韩国 | KOR          vless   cf=396    dl=19     OK
-   26/529 🇰🇷 韩国 | KOR          ss      cf=283    dl=109    OK
-   27/529 🇰🇷 韩国 | KOR          vless   cf=413    dl=106    OK
-   28/529 🇸🇬 新加坡 | SGP         vless   cf=629    dl=5      OK
-   29/529 🇸🇬 新加坡 | SGP         ss      cf=470    dl=34     OK
-   30/529 🇸🇬 新加坡 | SGP         vless   cf=900    dl=63     OK
-   31/529 🇸🇬 新加坡 | SGP         vless   cf=-      dl=-      X
-   32/529 🇸🇬 新加坡 | SGP         hysteria2 cf=324    dl=47     OK
-   33/529 🇸🇬 新加坡 | SGP         vless   cf=1473   dl=32     OK
-   34/529 🇹🇼 🇨🇳 台湾 | TWN       vless   cf=714    dl=38     OK
-   35/529 🇯🇵 机场推荐:dafei.de 日本  trojan  cf=-      dl=-      X
-   36/529 🇯🇵 机场推荐:dafei.de 日本  hysteria2 cf=-      dl=-      X
-   37/529 🇭🇰 机场推荐:dafei.de 香港  vless   cf=-      dl=-      X
-   38/529 🇻🇳 机场推荐:dafei.de 越南  vless   cf=-      dl=-      X
-   39/529 🇭🇰 香港 01             hysteria2 cf=-      dl=-      X
-   40/529 🇭🇰 香港 02             vless   cf=-      dl=-      X
-   41/529 🇭🇰 香港 03             hysteria2 cf=-      dl=-      X
-   42/529 🇯🇵 日本 01             hysteria2 cf=-      dl=-      X
-   43/529 🇯🇵 日本 02             vless   cf=-      dl=-      X
-   44/529 🇯🇵 日本 03             ss      cf=-      dl=-      X
-   45/529 ✅  @vistav2ray کانال hysteria2 cf=-      dl=-      X
-   46/529 🇸🇬214601 | ⚡️Telegra hysteria2 cf=-      dl=-      X
-   47/529 🇰🇷KR-🚀@VPNine1       hysteria2 cf=-      dl=-      X
-   48/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   49/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   50/529 🇭🇰[www.v2nodes.com]  vless   cf=-      dl=-      X
-   51/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   52/529 🇮🇳[www.v2nodes.com]  vless   cf=4530   dl=14     OK
-   53/529 🇯🇵[www.v2nodes.com]  vless   cf=1408   dl=12     OK
-   54/529 🇯🇵[www.v2nodes.com]  vless   cf=-      dl=-      X
-   55/529 🇰🇷[www.v2nodes.com]  vless   cf=491    dl=43     OK
-   56/529 🇰🇷[www.v2nodes.com]  vless   cf=-      dl=-      X
-   57/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   58/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   59/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   60/529 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
-   61/529 🇹🇼[www.v2nodes.com]  vless   cf=-      dl=-      X
-   62/529 🇻🇳[www.v2nodes.com]  vless   cf=724    dl=17     OK
-   63/529 🇭🇰[www.v2nodes.com]  ss      cf=25     dl=186    OK
-   64/529 🇯🇵[www.v2nodes.com]  ss      cf=-      dl=-      X
-   65/529 🇯🇵[www.v2nodes.com]  ss      cf=224    dl=119    OK
-   66/529 🇯🇵[www.v2nodes.com]  ss      cf=226    dl=119    OK
-   67/529 🇯🇵[www.v2nodes.com]  ss      cf=226    dl=138    OK
-   68/529 🇸🇬[www.v2nodes.com]  ss      cf=364    dl=87     OK
-   69/529 🇸🇬[www.v2nodes.com]  ss      cf=367    dl=82     OK
-   70/529 🇸🇬[www.v2nodes.com]  ss      cf=364    dl=71     OK
-   71/529 🇸🇬[www.v2nodes.com]  ss      cf=374    dl=87     OK
-   72/529 🇮🇩[www.v2nodes.com]  trojan  cf=-      dl=-      X
-   73/529 🇲🇾[www.v2nodes.com]  trojan  cf=-      dl=-      X
-   74/529 🇸🇬[www.v2nodes.com]  trojan  cf=1105   dl=11     OK
-   75/529 🇹🇼[www.v2nodes.com]  trojan  cf=-      dl=-      X
-   76/529 🇹🇼[www.v2nodes.com]  trojan  cf=-      dl=-      X
-   77/529 日本3|@ripaojiedian    vless   cf=-      dl=-      X
-   78/529 日本2|@ripaojiedian    vless   cf=-      dl=-      X
-   79/529 日本4|@ripaojiedian    vless   cf=-      dl=-      X
-   80/529 日本5|@ripaojiedian    vless   cf=-      dl=-      X
-   81/529 香港|@ripaojiedian     vless   cf=-      dl=-      X
-   82/529 新加坡|@ripaojiedian    vless   cf=-      dl=-      X
-   83/529 韩国|@ripaojiedian     vless   cf=-      dl=-      X
-   84/529 🇭🇰 香港 | HKG #1       vless   cf=-      dl=-      X
-   85/529 🇰🇷 韩国 | KOR #1       hysteria2 cf=-      dl=-      X
-   86/529 🇰🇷 韩国 | KOR #2       ss      cf=-      dl=-      X
-   87/529 🇸🇬 新加坡 | SGP #1      hysteria2 cf=-      dl=-      X
-   88/529 🇸🇬 新加坡 | SGP #2      vless   cf=-      dl=-      X
-   89/529 🇸🇬 新加坡 | SGP #3      vless   cf=-      dl=-      X
-   90/529 🇸🇬_新加坡 (3)           vless   cf=2286   dl=5      OK
-   91/529 🇷🇺_俄罗斯 (23)          vless   cf=1632   dl=13     OK
-   92/529 🇮🇳_印度 (3)            vless   cf=2170   dl=29     OK
-   93/529 🇯🇵_日本 (10)           vless   cf=-      dl=-      X
-   94/529 🇯🇵_日本 (13)           vless   cf=-      dl=-      X
-   95/529 🇯🇵_日本 (14)           vless   cf=-      dl=-      X
-   96/529 🇯🇵_日本 (17)           vless   cf=-      dl=-      X
-   97/529 🇯🇵_日本 (18)           vless   cf=-      dl=-      X
-   98/529 🇸🇬_新加坡 (4)           vless   cf=-      dl=-      X
-   99/529 🇸🇬_新加坡 (5)           vless   cf=-      dl=-      X
-  100/529 🇸🇬_新加坡 (6)           vless   cf=-      dl=-      X
-  101/529 🇸🇬_新加坡 (7)           vless   cf=-      dl=-      X
-  102/529 🇯🇵_日本 (21)           vless   cf=-      dl=-      X
-  103/529 🇯🇵_日本 (24)           vless   cf=-      dl=-      X
-  104/529 🇯🇵_日本 (25)           vless   cf=-      dl=-      X
-  105/529 🇸🇬_新加坡               trojan  cf=546    dl=31     OK
-  106/529 🇯🇵_日本 (8)            vless   cf=-      dl=-      X
-  107/529 🇮🇷_伊朗                vless   cf=-      dl=-      X
-  108/529 🇹🇼_台湾 (10)           vless   cf=-      dl=-      X
-  109/529 🇭🇰_香港                trojan  cf=-      dl=-      X
-  110/529 🇭🇰_香港 (2)            trojan  cf=-      dl=-      X
-  111/529 🇭🇰_香港 (3)            trojan  cf=-      dl=-      X
-  112/529 🇯🇵_日本 (12)           vless   cf=-      dl=-      X
-  113/529 🇯🇵_日本 (15)           vless   cf=-      dl=-      X
-  114/529 🇯🇵_日本 (16)           vless   cf=-      dl=-      X
-  115/529 🇭🇰_香港 (5)            trojan  cf=-      dl=-      X
-  116/529 🇩🇪 德国 | DEU #30      vless   cf=-      dl=-      X
-  117/529 🇭🇰 香港 | HKG #3       hysteria2 cf=-      dl=-      X
-  118/529 🇸🇬 新加坡 | SGP #1      ss      cf=-      dl=-      X
-  119/529 🇹🇼TW_1|149KB/s|A004- hysteria2 cf=-      dl=-      X
-  120/529 🇭🇰HK_1|139KB/s|A004- hysteria2 cf=-      dl=-      X
-  121/529 🇸🇬SG_7|72KB/s|M003-2 vless   cf=-      dl=-      X
-  122/529 ❓Other_5|288KB/s|M00 vless   cf=850    dl=35     OK
-  123/529 🇭🇰HK_2|200KB/s [b2d9 hysteria2 cf=-      dl=-      X
-  124/529 🇸🇬SG_11|206KB/s|M003 vless   cf=-      dl=-      X
-  125/529 🇸🇬SG_5|217KB/s|M003- ss      cf=366    dl=90     OK
-  126/529 🇸🇬SG_8|396KB/s|A001- vless   cf=-      dl=-      X
-  127/529 🇸🇬SG_4|227KB/s|M003- ss      cf=-      dl=-      X
-  128/529 🇯🇵_JP_日本_IPV4        trojan  cf=-      dl=-      X
-  129/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  130/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  131/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  132/529 🇯🇵JP日本節點丨yoyapai.com vless   cf=-      dl=-      X
-  133/529 🇯🇵JP日本節點丨yoyapai.com vless   cf=-      dl=-      X
-  134/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  135/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  136/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  137/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  138/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  139/529 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
-  140/529 🇹🇭 Thailand泰国丨yoyapa vless   cf=-      dl=-      X
-  141/529 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
-  142/529 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
-  143/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  144/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  145/529 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
-  146/529 🇹🇭TH泰國丨yoyapai.com   vless   cf=-      dl=-      X
-  147/529 JP日本丨yoyapai.com     vless   cf=-      dl=-      X
-  148/529 🇰🇷KR韩国丨yoyapai.com   vless   cf=-      dl=-      X
-  149/529 🇮🇳IN印度丨yoyapai.com   vless   cf=-      dl=-      X
-  150/529 🇹🇼TW臺灣丨yoyapai.com   vless   cf=-      dl=-      X
-  151/529 🇰🇷KR韩國丨yoyapai.com   vless   cf=-      dl=-      X
-  152/529 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
-  153/529 🇸🇬SG新加坡丨yoyapai.com  vless   cf=-      dl=-      X
-  154/529 🇻🇳VN越南丨yoyapai.com   vless   cf=-      dl=-      X
-  155/529 🇸🇬SG新加坡丨yoyapai.com  vless   cf=-      dl=-      X
-  156/529                      vmess   cf=-      dl=-      X
-  157/529 🇦🇪AE阿联酋丨yoyapai.com  vless   cf=-      dl=-      X
-  158/529 TW台湾(mibei77.com 米贝节 vless   cf=3612   dl=13     OK
-  159/529 HK香港(mibei77.com 米贝节 vless   cf=-      dl=-      X
-  160/529 JP日本(mibei77.com 米贝节 vless   cf=-      dl=-      X
-  161/529 🇭🇰HK_17|632KB/s|M003 hysteria2 cf=-      dl=-      X
-  162/529 🇸🇬SG_42|390KB/s|A004 vless   cf=5001   dl=-      X
-  163/529 🇰🇷KR_17|629KB/s|M003 hysteria2 cf=-      dl=-      X
-  164/529 🇭🇰HK_34|131KB/s|M003 vless   cf=-      dl=-      X
-  165/529 🇹🇼TW_7|514KB/s|A004- hysteria2 cf=-      dl=-      X
-  166/529 🇸🇬SG_24|827KB/s|M003 ss      cf=371    dl=75     OK
-  167/529 🇯🇵JP_14|74KB/s|A004- hysteria2 cf=-      dl=-      X
-  168/529 🇰🇷KR_3|309KB/s|M003- hysteria2 cf=-      dl=-      X
-  169/529 🇸🇬SG_31|476KB/s|A004 vless   cf=-      dl=-      X
-  170/529 🇸🇬SG_51|991KB/s|M003 ss      cf=-      dl=-      X
-  171/529 🇭🇰HK_36|213KB/s|M003 vless   cf=-      dl=-      X
-  172/529 🇯🇵JP_13|530KB/s|A004 vless   cf=-      dl=-      X
-  173/529 🇰🇷KR_30|636KB/s|M003 hysteria2 cf=-      dl=-      X
-  174/529 🇸🇬SG_56|554KB/s|M003 hysteria2 cf=-      dl=-      X
-  175/529 🇰🇷KR_15|468KB/s|A004 trojan  cf=481    dl=89     OK
-  176/529 🇸🇬SG_39|639KB/s|F003 vless   cf=-      dl=-      X
-  177/529 🇯🇵JP_1|352KB/s|R002- hysteria2 cf=-      dl=-      X
-  178/529 🇰🇷KR_1|464KB/s|A004- ss      cf=348    dl=13     OK
-  179/529 🇯🇵JP_30|511KB/s|M003 vless   cf=218    dl=166    OK
-  180/529 🇸🇬SG_37|227KB/s|M003 vless   cf=-      dl=-      X
-  181/529 🇹🇼TW_21|492KB/s|A004 hysteria2 cf=-      dl=-      X
-  182/529 🇸🇬SG_14|942KB/s|A004 hysteria2 cf=-      dl=-      X
-  183/529 🇦🇺AU_1|485KB/s|A004- trojan  cf=-      dl=-      X
-  184/529 🇸🇬SG_54|816KB/s|B007 vless   cf=564    dl=76     OK
-  185/529 🇯🇵JP_24|641KB/s|M003 vless   cf=348    dl=130    OK
-  186/529 🇭🇰HK_19|325KB/s|A001 hysteria2 cf=-      dl=-      X
-  187/529 🇯🇵JP_18|611KB/s|C002 trojan  cf=345    dl=14     OK
-  188/529 🇸🇬SG_57|501KB/s|M003 hysteria2 cf=-      dl=-      X
-  189/529 🇸🇬SG_32|371KB/s|A004 vless   cf=714    dl=63     OK
-  190/529 🇸🇬SG_22|412KB/s [82d vless   cf=5001   dl=4      OK
-  191/529 🇰🇷KR_7|350KB/s|A004- hysteria2 cf=-      dl=-      X
-  192/529 🇸🇬SG_53|932KB/s|B007 ss      cf=-      dl=-      X
-  193/529 🇦🇺AU_6|592KB/s|M003- hysteria2 cf=-      dl=-      X
-  194/529 🇯🇵JP_27|653KB/s|B007 ss      cf=-      dl=-      X
-  195/529 🇦🇺AU_7|578KB/s|M003- hysteria2 cf=-      dl=-      X
-  196/529 🇰🇷KR_21|613KB/s|M003 trojan  cf=-      dl=-      X
-  197/529 🇯🇵JP_19|664KB/s|B007 vless   cf=-      dl=-      X
-  198/529 🇸🇬SG_50|589KB/s|M003 hysteria2 cf=-      dl=-      X
-  199/529 🇭🇰HK_29|478KB/s|A004 hysteria2 cf=-      dl=-      X
-  200/529 🇹🇼TW_38|88KB/s|F003- vless   cf=491    dl=-      X
-  201/529 🇭🇰HK_5|595KB/s|R002- hysteria2 cf=-      dl=-      X
-  202/529 🇹🇼TW_37|205KB/s|R002 vless   cf=599    dl=80     OK
-  203/529 🇰🇷KR_2|213KB/s|M001- ss      cf=1388   dl=11     OK
-  204/529 🇭🇰HK_37|738KB/s|S004 vless   cf=492    dl=114    OK
-  205/529 🇯🇵JP_10|144KB/s|M003 ss      cf=233    dl=59     OK
-  206/529 🇰🇷KR_10|738KB/s|A004 hysteria2 cf=-      dl=-      X
-  207/529 🇸🇬SG_48|106KB/s|M003 vless   cf=-      dl=-      X
-  208/529 🇸🇬SG_52|479KB/s|A001 ss      cf=-      dl=-      X
-  209/529 🇭🇰 香港 | HKG 2        ss      cf=-      dl=-      X
-  210/529 🇯🇵 日本 | JPN          ss      cf=-      dl=-      X
-  211/529 🇯🇵 日本 | JPN 2        ss      cf=-      dl=-      X
-  212/529 🇯🇵 Rose—46           ss      cf=-      dl=-      X
-  213/529 🇦🇺 Rose—54           ss      cf=-      dl=-      X
-  214/529 🇮🇳 Rose—62           ss      cf=-      dl=-      X
-  215/529 🇸🇬 Rose—80           ss      cf=-      dl=-      X
-  216/529                      vmess   cf=-      dl=-      X
-  217/529                      vmess   cf=-      dl=-      X
-  218/529                      vmess   cf=-      dl=-      X
-  219/529                      vmess   cf=-      dl=-      X
-  220/529                      vmess   cf=-      dl=-      X
-  221/529 🔥Join+Telegram:@Fara ss      cf=363    dl=76     OK
-  222/529 🔥Join+Telegram:@Fara ss      cf=-      dl=-      X
-  223/529 🇸🇬SG_56|737KB/s|A004 vless   cf=752    dl=20     OK
-  224/529 🇸🇬SG_42|699KB/s|A004 vless   cf=564    dl=76     OK
-  225/529 🇦🇺AU_4|550KB/s|M003- hysteria2 cf=-      dl=-      X
-  226/529 🇩🇪DE_106|775KB/s|B00 ss      cf=711    dl=46     OK
-  227/529 🇯🇵JP_24|302KB/s|R002 vless   cf=2622   dl=50     OK
-  228/529 🇰🇷KR_36|567KB/s|M003 trojan  cf=452    dl=96     OK
-  229/529 🇸🇬SG_43|90KB/s|M003- vless   cf=1355   dl=45     OK
-  230/529 🇯🇵JP_26|377KB/s|M003 vless   cf=901    dl=32     OK
-  231/529 🇭🇰HK_87|646KB/s|S004 vless   cf=511    dl=21     OK
-  232/529 🇭🇰HK_90|315KB/s|M003 vless   cf=5000   dl=-      X
-  233/529 🇸🇬SG_30|203KB/s|M003 hysteria2 cf=-      dl=-      X
-  234/529 🇸🇬SG_50|960KB/s|M003 vless   cf=-      dl=-      X
-  235/529 🇸🇬SG_54|506KB/s|M003 hysteria2 cf=-      dl=-      X
-  236/529 🇦🇺AU_2|492KB/s|R002- hysteria2 cf=-      dl=-      X
-  237/529 🇰🇷KR_42|492KB/s|M003 vless   cf=522    dl=91     OK
-  238/529 🇸🇬SG_34|878KB/s|A004 trojan  cf=-      dl=-      X
-  239/529 🇦🇺AU_8|504KB/s|B007- hysteria2 cf=-      dl=-      X
-  240/529 🇰🇷KR_38|538KB/s|M003 trojan  cf=456    dl=85     OK
-  241/529 🇯🇵JP_19|696KB/s|M003 hysteria2 cf=-      dl=-      X
-  242/529 🇰🇷KR_40|503KB/s|B007 vless   cf=414    dl=115    OK
-  243/529 🇦🇺AU_6|335KB/s|M003- vless   cf=765    dl=49     OK
-  244/529 🇭🇰HK_91|638KB/s|M003 vless   cf=486    dl=109    OK
-  245/529 PRX11 | @proxystore1 vless   cf=-      dl=-      X
-  246/529 🇸🇬 https://t.me/Conf ss      cf=-      dl=-      X
-  247/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  248/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  249/529 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
-  250/529 🇮🇳 https://t.me/Conf vless   cf=1608   dl=25     OK
-  251/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  252/529 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
-  253/529 🇦🇺 https://t.me/Conf vless   cf=-      dl=-      X
-  254/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  255/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  256/529 🇸🇬 https://t.me/Conf vless   cf=548    dl=47     OK
-  257/529 🇯🇵 https://t.me/Conf vless   cf=1065   dl=19     OK
-  258/529 🇯🇵 https://t.me/Conf vless   cf=1116   dl=15     OK
-  259/529 🇭🇰 https://t.me/Conf vless   cf=480    dl=33     OK
-  260/529 🇭🇰 https://t.me/Conf vless   cf=516    dl=73     OK
-  261/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  262/529 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
-  263/529 🇮🇳 https://t.me/Conf vless   cf=902    dl=39     OK
-  264/529 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
-  265/529 🌐 https://t.me/Confi vless   cf=-      dl=-      X
-  266/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  267/529 🇻🇳 https://t.me/Conf vless   cf=-      dl=-      X
-  268/529 🇹🇼 https://t.me/Conf trojan  cf=710    dl=16     OK
-  269/529 🇭🇰 https://t.me/Conf vless   cf=597    dl=6      OK
-  270/529 🇸🇬 https://t.me/Conf vless   cf=4021   dl=13     OK
-  271/529 🌐 https://t.me/Confi hysteria2 cf=315    dl=35     OK
-  272/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  273/529 🇮🇩 https://t.me/Conf trojan  cf=-      dl=-      X
-  274/529 🇭🇰 https://t.me/Conf vless   cf=517    dl=28     OK
-  275/529 🌐 https://t.me/Confi vless   cf=-      dl=-      X
-  276/529 🌐 https://t.me/Confi vless   cf=-      dl=-      X
-  277/529 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
-  278/529 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
-  279/529 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
-  280/529 🇭🇰 https://t.me/Conf vless   cf=985    dl=44     OK
-  281/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  282/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  283/529 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
-  284/529 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
-  285/529 🇻🇳 https://t.me/Conf vless   cf=-      dl=-      X
-  286/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  287/529 🇸🇬 https://t.me/Conf ss      cf=-      dl=-      X
-  288/529 🇯🇵 https://t.me/Conf vless   cf=3708   dl=10     OK
-  289/529 🇯🇵 https://t.me/Conf vless   cf=5001   dl=5      OK
-  290/529 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
-  291/529 🇰🇷 https://t.me/Conf vless   cf=5041   dl=12     OK
-  292/529 🇯🇵 https://t.me/Conf vless   cf=5001   dl=5      OK
-  293/529 🇯🇵 https://t.me/Conf vless   cf=3727   dl=7      OK
-  294/529 🇯🇵 https://t.me/Conf vless   cf=5300   dl=14     OK
-  295/529 🇯🇵 https://t.me/Conf vless   cf=1607   dl=9      OK
-  296/529 🇯🇵 https://t.me/Conf vless   cf=3157   dl=12     OK
-  297/529 🇭🇰 https://t.me/Conf vless   cf=2869   dl=14     OK
-  298/529 🇭🇰 https://t.me/Conf vless   cf=1952   dl=14     OK
-  299/529 🇭🇰 https://t.me/Conf hysteria2 cf=-      dl=-      X
-  300/529 🇸🇬 https://t.me/Conf hysteria2 cf=-      dl=-      X
-  301/529 🇸🇬 https://t.me/Conf ss      cf=364    dl=13     OK
-  302/529 🇰🇷 KR | 115.161.136. ss      cf=319    dl=-      X
-  303/529 🇸🇬 SG | 188.166.220. ss      cf=-      dl=-      X
-  304/529 🏴‍☠️ UN | mohandesss vless   cf=-      dl=-      X
-  305/529 🇹🇼 TW | 59.125.69.22 vless   cf=609    dl=72     OK
-  306/529 undefined HK | 45.19 vless   cf=-      dl=-      X
-  307/529 undefined HK | 82.24 vless   cf=-      dl=-      X
-  308/529 🇨🇳 CN | 118.145.128. vless   cf=-      dl=-      X
-  309/529 v2go | 🇯🇵 JP | VLESS vless   cf=3829   dl=4      OK
-  310/529 v2go | 🇵🇭 PH | VLESS vless   cf=-      dl=-      X
-  311/529 v2go | 🇯🇵 JP | VLESS vless   cf=-      dl=-      X
-  312/529 v2go | 🇻🇳 VN | VLESS vless   cf=1935   dl=29     OK
-  313/529 v2go | 🇭🇰 HK | VLESS vless   cf=-      dl=-      X
-  314/529 v2go | 🇸🇬 SG | VLESS vless   cf=-      dl=-      X
-  315/529 v2go | 🇭🇰 HK | VLESS vless   cf=3451   dl=4      OK
-  316/529 [🛜] @Firmfox [23-817 vless   cf=-      dl=-      X
-  317/529                      vmess   cf=-      dl=-      X
-  318/529                      vmess   cf=-      dl=-      X
-  319/529 🇦🇺AU-103.224.212.216 trojan  cf=-      dl=-      X
-  320/529 hamedp71::🇸🇬         vless   cf=5000   dl=4      OK
-  321/529                      vmess   cf=-      dl=-      X
-  322/529                      vmess   cf=-      dl=-      X
-  323/529                      vmess   cf=-      dl=-      X
-  324/529 🇦🇺AU-103.224.212.216 trojan  cf=-      dl=-      X
-  325/529                      vmess   cf=-      dl=-      X
-  326/529 🇸🇬SG-15.235.197.4-79 trojan  cf=-      dl=-      X
-  327/529 hamedp71::🇸🇬         vless   cf=5000   dl=4      OK
-  328/529                      vmess   cf=-      dl=-      X
-  329/529 @B2Hub               vless   cf=-      dl=-      X
-  330/529 🇸🇬SG-51.79.161.232-7 ss      cf=-      dl=-      X
-  331/529 🇦🇺AU-45.79.238.129-7 ss      cf=-      dl=-      X
-  332/529 🇸🇬SG-3.0.148.195-299 ss      cf=-      dl=-      X
-  333/529 🇸🇬SG-54.254.129.246- ss      cf=-      dl=-      X
-  334/529 🇯🇵JP-153.125.148.41- trojan  cf=-      dl=-      X
-  335/529 🇦🇺AU-162.4.84.241-48 trojan  cf=-      dl=-      X
-  336/529 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
-  337/529 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
-  338/529 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
-  339/529 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
-  340/529 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
-  341/529 🇸🇬SG-188.253.12.15-1 trojan  cf=-      dl=-      X
-  342/529 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
-  343/529 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
-  344/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  345/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  346/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  347/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  348/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  349/529 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
-  350/529 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
-  351/529 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
-  352/529 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
-  353/529 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
-  354/529 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
-  355/529 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
-  356/529 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
-  357/529 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
-  358/529 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
-  359/529 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
-  360/529 🇸🇬SG-188.253.12.93-1 trojan  cf=-      dl=-      X
-  361/529 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
-  362/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  363/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  364/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  365/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  366/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  367/529 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
-  368/529 🇮🇳IN-152.67.160.174- trojan  cf=-      dl=-      X
-  369/529 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
-  370/529 🇰🇷KR-144.24.72.126-3 trojan  cf=-      dl=-      X
-  371/529 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
-  372/529 🇦🇺AU-103.224.212.211 trojan  cf=-      dl=-      X
-  373/529 🇦🇺AU-103.224.212.211 trojan  cf=-      dl=-      X
-  374/529 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
-  375/529 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
-  376/529 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
-  377/529 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
-  378/529 🏁RELAY-172.67.215.25 trojan  cf=-      dl=-      X
-  379/529 🇩🇪DE-157.90.33.73-58 trojan  cf=-      dl=-      X
-  380/529 🇰🇷KR-221.155.202.236 trojan  cf=-      dl=-      X
-  381/529 🇰🇷KR-221.155.195.131 trojan  cf=-      dl=-      X
-  382/529 🇰🇷KR-221.155.195.131 trojan  cf=-      dl=-      X
-  383/529 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
-  384/529 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
-  385/529 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
-  386/529 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
-  387/529 🇹🇼TW-220.128.128.151 trojan  cf=-      dl=-      X
-  388/529 🇹🇼TW-60.250.80.31-31 trojan  cf=-      dl=-      X
-  389/529 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
-  390/529 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
-  391/529 🇹🇼TW-60.250.152.229- trojan  cf=-      dl=-      X
-  392/529 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
-  393/529 🇹🇼TW-60.250.80.31-33 trojan  cf=-      dl=-      X
-  394/529 🇹🇼TW-60.250.152.229- trojan  cf=-      dl=-      X
-  395/529 🇯🇵JP-152.175.38.59-3 trojan  cf=-      dl=-      X
-  396/529 🇯🇵JP-152.175.38.171- trojan  cf=-      dl=-      X
-  397/529 🇯🇵JP-152.175.38.179- trojan  cf=-      dl=-      X
-  398/529 🇯🇵JP-152.175.38.29-3 trojan  cf=-      dl=-      X
-  399/529 🇯🇵JP-152.175.38.67-3 trojan  cf=-      dl=-      X
-  400/529 🇯🇵JP-152.175.38.196- trojan  cf=-      dl=-      X
-  401/529 🇯🇵JP-152.175.38.197- trojan  cf=-      dl=-      X
-  402/529 🇯🇵JP-152.175.38.59-3 trojan  cf=-      dl=-      X
-  403/529 🇭🇰HK-119.246.1.143-1 trojan  cf=-      dl=-      X
-  404/529 🇸🇬SG-91.243.81.248-5 trojan  cf=-      dl=-      X
-  405/529 🇯🇵JP-18.179.31.199-5 trojan  cf=-      dl=-      X
-  406/529 🇭🇰HK-219.76.13.181-0 trojan  cf=-      dl=-      X
-  407/529 🇸🇬SG-172.104.51.247- trojan  cf=-      dl=-      X
-  408/529 🇯🇵JP-154.31.114.10-0 trojan  cf=-      dl=-      X
-  409/529 🇭🇰HK-20.187.85.198-4 trojan  cf=-      dl=-      X
-  410/529 🇭🇰HK-18.167.36.170-2 trojan  cf=-      dl=-      X
-  411/529 🇰🇷KR-103.133.240.115 trojan  cf=-      dl=-      X
-  412/529 🇸🇬SG-103.25.202.114- trojan  cf=-      dl=-      X
-  413/529 🇭🇰HK-104.253.175.99- trojan  cf=-      dl=-      X
-  414/529 🇯🇵JP-108.160.132.178 trojan  cf=-      dl=-      X
-  415/529 🇰🇷KR-118.218.10.159- trojan  cf=-      dl=-      X
-  416/529 🇯🇵JP-124.156.208.160 trojan  cf=-      dl=-      X
-  417/529 🇰🇷KR-132.226.23.185- trojan  cf=-      dl=-      X
-  418/529 🇯🇵JP-133.18.140.38-0 trojan  cf=-      dl=-      X
-  419/529 🇸🇬SG-139.162.62.195- trojan  cf=-      dl=-      X
-  420/529 🇰🇷KR-146.56.187.1-09 trojan  cf=-      dl=-      X
-  421/529 🇯🇵JP-149.28.21.106-0 trojan  cf=-      dl=-      X
-  422/529 🇯🇵JP-150.230.212.247 trojan  cf=-      dl=-      X
-  423/529 🇰🇷KR-150.230.249.88- trojan  cf=-      dl=-      X
-  424/529 🇯🇵JP-156.246.91.9-07 trojan  cf=-      dl=-      X
-  425/529 🇰🇷KR-158.180.71.69-0 trojan  cf=-      dl=-      X
-  426/529 🇰🇷KR-158.247.199.106 trojan  cf=-      dl=-      X
-  427/529 🇸🇬SG-159.223.41.212- trojan  cf=-      dl=-      X
-  428/529 🇸🇬SG-161.118.213.45- trojan  cf=-      dl=-      X
-  429/529 🇯🇵JP-168.138.212.80- trojan  cf=-      dl=-      X
-  430/529 🇸🇬SG-168.144.109.68- trojan  cf=-      dl=-      X
-  431/529 🇸🇬SG-168.144.96.147- trojan  cf=-      dl=-      X
-  432/529 🇯🇵JP-172.104.120.92- trojan  cf=-      dl=-      X
-  433/529 🇯🇵JP-172.104.80.248- trojan  cf=-      dl=-      X
-  434/529 🇯🇵JP-172.104.81.253- trojan  cf=-      dl=-      X
-  435/529 🇯🇵JP-172.104.86.229- trojan  cf=-      dl=-      X
-  436/529 🇯🇵JP-172.237.13.221- trojan  cf=-      dl=-      X
-  437/529 🇭🇰HK-216.236.38.234- trojan  cf=-      dl=-      X
-  438/529 🇸🇬SG-43.169.19.179-0 trojan  cf=-      dl=-      X
-  439/529 🇭🇰HK-45.38.60.139-10 trojan  cf=-      dl=-      X
-  440/529 🇰🇷KR-54.180.151.15-0 trojan  cf=-      dl=-      X
-  441/529 🇰🇷KR-64.110.70.64-09 trojan  cf=-      dl=-      X
-  442/529 🇭🇰HK-83.229.121.78-5 trojan  cf=-      dl=-      X
-  443/529 🇮🇩ID-103.226.139.201 trojan  cf=-      dl=-      X
-  444/529 🇸🇬SG-18.140.67.76-57 trojan  cf=-      dl=-      X
-  445/529 🇰🇷KR-3.34.6.217-4261 trojan  cf=-      dl=-      X
-  446/529                      vmess   cf=-      dl=-      X
-  447/529                      vmess   cf=-      dl=-      X
-  448/529                      vmess   cf=-      dl=-      X
-  449/529                      vmess   cf=-      dl=-      X
-  450/529                      vmess   cf=-      dl=-      X
-  451/529                      vmess   cf=-      dl=-      X
-  452/529                      vmess   cf=-      dl=-      X
-  453/529 🇮🇳 India - Mumbai |  vless   cf=1519   dl=11     OK
-  454/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  455/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  456/529 🇨🇭 Switzerland - Zur vless   cf=-      dl=-      X
-  457/529 🇲🇩 Moldova - Unknown vless   cf=-      dl=-      X
-  458/529 🇩🇪 Germany - Frankfu vless   cf=-      dl=-      X
-  459/529 🇬🇧 United Kingdom -  vless   cf=-      dl=-      X
-  460/529 🇷🇺 Russia - Moscow | vless   cf=-      dl=-      X
-  461/529 🇷🇺 Russia - St Peter vless   cf=-      dl=-      X
-  462/529 🇸🇬 Singapore - Unkno trojan  cf=-      dl=-      X
-  463/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  464/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  465/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  466/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  467/529 🇭🇰 Hong Kong SAR Chi trojan  cf=-      dl=-      X
-  468/529 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
-  469/529 🇭🇰230861 | ⚡️Telegra trojan  cf=-      dl=-      X
-  470/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  471/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  472/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  473/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  474/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  475/529 RN2_JP1@QiangLieTuiJ vless   cf=-      dl=-      X
-  476/529 🇸🇬230784 | ⚡️Telegra vless   cf=539    dl=74     OK
-  477/529 [freeSub#002] A🟢🇸🇬re trojan  cf=-      dl=-      X
-  478/529 [freeSub#003] C🟠🇭🇰ho trojan  cf=-      dl=-      X
-  479/529 [freeSub#004] A🟢🇲🇾re trojan  cf=-      dl=-      X
-  480/529 [freeSub#005] A🟢🇻🇳re trojan  cf=-      dl=-      X
-  481/529 [freeSub#006] A🟢🇰🇷re trojan  cf=-      dl=-      X
-  482/529 [freeSub#008] D🔴🇯🇵ho trojan  cf=-      dl=-      X
-  483/529 [freeSub#010] A🟢🇻🇳re trojan  cf=-      dl=-      X
-  484/529 [freeSub#011] A🟢🇭🇰re trojan  cf=-      dl=-      X
-  485/529 [freeSub#012] A🟢🇸🇬re trojan  cf=-      dl=-      X
-  486/529 [freeSub#013] D🔴🇸🇬ho trojan  cf=-      dl=-      X
-  487/529 [freeSub#015] C🟠🇯🇵ho trojan  cf=-      dl=-      X
-  488/529 [freeSub#017] A🟢🇻🇳re trojan  cf=-      dl=-      X
-  489/529 [freeSub#020] A🟢🇹🇼re trojan  cf=-      dl=-      X
-  490/529 [freeSub#021] D🔴🇯🇵ho trojan  cf=-      dl=-      X
-  491/529 [freeSub#038] A🟢🇰🇷re trojan  cf=-      dl=-      X
-  492/529 [freeSub#044] U⚪🇭🇰uk trojan  cf=-      dl=-      X
-  493/529 [freeSub#053] A🟢🇰🇷re trojan  cf=-      dl=-      X
-  494/529 [freeSub#065] C🟠🇹🇭ho socks5  cf=1013   dl=42     OK
-  495/529 [freeSub#070] A🟢🇹🇭re socks5  cf=999    dl=45     OK
-  496/529 [freeSub#073] A🟢🇹🇭re socks5  cf=1010   dl=51     OK
-  497/529 [freeSub#078] D🔴🇯🇵ho trojan  cf=-      dl=-      X
-  498/529 [freeSub#091] A🟢🇹🇭re trojan  cf=-      dl=-      X
-  499/529 [freeSub#093] B🟡🇯🇵bu trojan  cf=-      dl=-      X
-  500/529 [freeSub#096] A🟢🇹🇭re socks5  cf=1060   dl=49     OK
-  501/529 [freeSub#104] D🔴🇮🇳ho trojan  cf=-      dl=-      X
-  502/529 [freeSub#106] C🟠🇵🇭ho trojan  cf=-      dl=-      X
-  503/529 [freeSub#111] D🔴🇸🇬ho trojan  cf=-      dl=-      X
-  504/529 [NoMoreWalls#074] 🇸🇬 vless   cf=-      dl=-      X
-  505/529 [AutoMerge#005] 新加坡1 hysteria2 cf=-      dl=-      X
-  506/529 [AutoMerge#013] 🇹🇭TH socks5  cf=1042   dl=49     OK
-  507/529 [AutoMerge#014] 🇹🇭TH socks5  cf=1042   dl=46     OK
-  508/529 [AutoMerge#020] 🇯🇵JP socks5  cf=588    dl=89     OK
-  509/529 [AutoMerge#024] 🇹🇭TH socks5  cf=1037   dl=47     OK
-  510/529 [AutoMerge#025] 🇸🇬SG socks5  cf=905    dl=58     OK
-  511/529 [AutoMerge#062] 🇰🇷 韩 hysteria2 cf=-      dl=-      X
-  512/529 [AutoMerge#075] 🇸🇬 新 vless   cf=-      dl=-      X
-  513/529 [AutoMerge#076] 🇸🇬 新 hysteria2 cf=-      dl=-      X
-  514/529 [AutoMerge#079] 🇸🇬 新 vless   cf=-      dl=-      X
-  515/529 [zhuhaiuk#008] TH -  socks5  cf=995    dl=51     OK
-  516/529 [zhuhaiuk#011] TH -  socks5  cf=1019   dl=47     OK
-  517/529 [zhuhaiuk#014] TH -  socks5  cf=1073   dl=19     OK
-  518/529 [zhuhaiuk#018] VN -  socks5  cf=1109   dl=49     OK
-  519/529 [zhuhaiuk#020] TH -  socks5  cf=1030   dl=49     OK
-  520/529 [zhuhaiuk#021] HK -  socks5  cf=-      dl=-      X
-  521/529 [free18#259] 🇯🇵_日本 ( ss      cf=232    dl=11     OK
-  522/529 [ermaozi#010] 🇯🇵[www vless   cf=-      dl=-      X
-  523/529 [ermaozi#012] 🇰🇷[www ss      cf=337    dl=-      X
-  524/529 [ermaozi#015] 🇭🇰[www trojan  cf=-      dl=-      X
-  525/529 [ermaozi#022] 🇻🇳VN_2 socks5  cf=1120   dl=46     OK
-  526/529 [ermaozi#024] 🇹🇭TH_2 socks5  cf=1069   dl=51     OK
-  527/529 [ermaozi#031] 🇯🇵JP_3 socks5  cf=549    dl=89     OK
-  528/529 [Eternity#091] 🇰🇷KR- ss      cf=366    dl=9      OK
-  529/529 [Eternity#101] 🇰🇷KR- trojan  cf=-      dl=-      X
+    1/513                      vmess   cf=-      dl=-      X
+    2/513 🇭🇰HK香港丨yoyapai.com\r trojan  cf=-      dl=-      X
+    3/513 🇸🇬 SG新加坡(mibei77.com trojan  cf=-      dl=-      X
+    4/513 🇸🇬 SG新加坡(mibei77.com trojan  cf=-      dl=-      X
+    5/513 JP - zhuhai.uk       vless   cf=-      dl=-      X
+    6/513 SG - zhuhai.uk       vless   cf=-      dl=-      X
+    7/513 SG - zhuhai.uk 02    vless   cf=-      dl=-      X
+    8/513 🇯🇵_JP_日本_IPV4        vless   cf=-      dl=-      X
+    9/513 🇸🇬_SG_新加坡_IPV4       vless   cf=-      dl=-      X
+   10/513 🇭🇰HK_1|3.2MB/s       vless   cf=-      dl=-      X
+   11/513 🇭🇰HK_2|1.5MB/s       vless   cf=-      dl=-      X
+   12/513 🇸🇬_SG_新加坡_IPV4       trojan  cf=-      dl=-      X
+   13/513 🇸🇬_SG_新加坡_IPV4 (2)   trojan  cf=-      dl=-      X
+   14/513 🇭🇰 香港 | HKG          vless   cf=1741   dl=9      OK
+   15/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   16/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   17/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   18/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   19/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   20/513 🇭🇰 香港 | HKG          vless   cf=-      dl=-      X
+   21/513 🇯🇵 日本 | JPN          hysteria2 cf=-      dl=-      X
+   22/513 🇰🇷 韩国 | KOR          ss      cf=295    dl=103    OK
+   23/513 🇰🇷 韩国 | KOR          ss      cf=291    dl=20     OK
+   24/513                      vmess   cf=488    dl=86     OK
+   25/513 🇰🇷 韩国 | KOR          vless   cf=437    dl=21     OK
+   26/513 🇰🇷 韩国 | KOR          ss      cf=310    dl=72     OK
+   27/513 🇰🇷 韩国 | KOR          vless   cf=447    dl=97     OK
+   28/513 🇸🇬 新加坡 | SGP         vless   cf=572    dl=18     OK
+   29/513 🇸🇬 新加坡 | SGP         ss      cf=615    dl=18     OK
+   30/513 🇸🇬 新加坡 | SGP         vless   cf=1105   dl=48     OK
+   31/513 🇸🇬 新加坡 | SGP         vless   cf=-      dl=-      X
+   32/513 🇸🇬 新加坡 | SGP         hysteria2 cf=294    dl=20     OK
+   33/513 🇸🇬 新加坡 | SGP         vless   cf=1418   dl=30     OK
+   34/513 🇹🇼 🇨🇳 台湾 | TWN       vless   cf=-      dl=-      X
+   35/513 🇯🇵 机场推荐:dafei.de 日本  trojan  cf=-      dl=-      X
+   36/513 🇯🇵 机场推荐:dafei.de 日本  hysteria2 cf=-      dl=-      X
+   37/513 🇭🇰 机场推荐:dafei.de 香港  vless   cf=993    dl=11     OK
+   38/513 🇻🇳 机场推荐:dafei.de 越南  vless   cf=-      dl=-      X
+   39/513 🇭🇰 香港 01             hysteria2 cf=-      dl=-      X
+   40/513 🇭🇰 香港 02             vless   cf=-      dl=-      X
+   41/513 🇭🇰 香港 03             hysteria2 cf=-      dl=-      X
+   42/513 🇯🇵 日本 01             hysteria2 cf=-      dl=-      X
+   43/513 🇯🇵 日本 02             vless   cf=-      dl=-      X
+   44/513 🇯🇵 日本 03             ss      cf=-      dl=-      X
+   45/513 ✅  @vistav2ray کانال hysteria2 cf=-      dl=-      X
+   46/513 🇸🇬214601 | ⚡️Telegra hysteria2 cf=-      dl=-      X
+   47/513 🇰🇷KR-🚀@VPNine1       hysteria2 cf=-      dl=-      X
+   48/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   49/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   50/513 🇭🇰[www.v2nodes.com]  vless   cf=-      dl=-      X
+   51/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   52/513 🇮🇳[www.v2nodes.com]  vless   cf=6277   dl=4      OK
+   53/513 🇯🇵[www.v2nodes.com]  vless   cf=5787   dl=8      OK
+   54/513 🇯🇵[www.v2nodes.com]  vless   cf=-      dl=-      X
+   55/513 🇰🇷[www.v2nodes.com]  vless   cf=502    dl=71     OK
+   56/513 🇰🇷[www.v2nodes.com]  vless   cf=-      dl=-      X
+   57/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   58/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   59/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   60/513 🇸🇬[www.v2nodes.com]  vless   cf=-      dl=-      X
+   61/513 🇹🇼[www.v2nodes.com]  vless   cf=-      dl=-      X
+   62/513 🇻🇳[www.v2nodes.com]  vless   cf=2464   dl=23     OK
+   63/513 🇭🇰[www.v2nodes.com]  ss      cf=3916   dl=5      OK
+   64/513 🇯🇵[www.v2nodes.com]  ss      cf=-      dl=-      X
+   65/513 🇯🇵[www.v2nodes.com]  ss      cf=248    dl=129    OK
+   66/513 🇯🇵[www.v2nodes.com]  ss      cf=245    dl=128    OK
+   67/513 🇯🇵[www.v2nodes.com]  ss      cf=244    dl=127    OK
+   68/513 🇸🇬[www.v2nodes.com]  ss      cf=372    dl=82     OK
+   69/513 🇸🇬[www.v2nodes.com]  ss      cf=374    dl=86     OK
+   70/513 🇸🇬[www.v2nodes.com]  ss      cf=374    dl=88     OK
+   71/513 🇸🇬[www.v2nodes.com]  ss      cf=375    dl=81     OK
+   72/513 🇮🇩[www.v2nodes.com]  trojan  cf=-      dl=-      X
+   73/513 🇲🇾[www.v2nodes.com]  trojan  cf=5000   dl=-      X
+   74/513 🇸🇬[www.v2nodes.com]  trojan  cf=1340   dl=10     OK
+   75/513 🇹🇼[www.v2nodes.com]  trojan  cf=-      dl=-      X
+   76/513 🇹🇼[www.v2nodes.com]  trojan  cf=-      dl=-      X
+   77/513 🇻🇳[www.v2nodes.com]  trojan  cf=-      dl=-      X
+   78/513 日本3|@ripaojiedian    vless   cf=-      dl=-      X
+   79/513 日本2|@ripaojiedian    vless   cf=-      dl=-      X
+   80/513 日本4|@ripaojiedian    vless   cf=-      dl=-      X
+   81/513 日本5|@ripaojiedian    vless   cf=-      dl=-      X
+   82/513 香港|@ripaojiedian     vless   cf=-      dl=-      X
+   83/513 新加坡|@ripaojiedian    vless   cf=-      dl=-      X
+   84/513 韩国|@ripaojiedian     vless   cf=-      dl=-      X
+   85/513 🇭🇰 香港 | HKG #1       vless   cf=-      dl=-      X
+   86/513 🇰🇷 韩国 | KOR #1       hysteria2 cf=-      dl=-      X
+   87/513 🇰🇷 韩国 | KOR #2       ss      cf=-      dl=-      X
+   88/513 🇸🇬 新加坡 | SGP #1      hysteria2 cf=-      dl=-      X
+   89/513 🇸🇬 新加坡 | SGP #2      vless   cf=-      dl=-      X
+   90/513 🇸🇬 新加坡 | SGP #3      vless   cf=-      dl=-      X
+   91/513 🇸🇬_新加坡 (3)           vless   cf=-      dl=-      X
+   92/513 🇷🇺_俄罗斯 (23)          vless   cf=3029   dl=20     OK
+   93/513 🇮🇳_印度 (3)            vless   cf=1975   dl=33     OK
+   94/513 🇯🇵_日本 (10)           vless   cf=-      dl=-      X
+   95/513 🇯🇵_日本 (13)           vless   cf=-      dl=-      X
+   96/513 🇯🇵_日本 (14)           vless   cf=-      dl=-      X
+   97/513 🇯🇵_日本 (17)           vless   cf=-      dl=-      X
+   98/513 🇯🇵_日本 (18)           vless   cf=-      dl=-      X
+   99/513 🇸🇬_新加坡 (4)           vless   cf=-      dl=-      X
+  100/513 🇸🇬_新加坡 (5)           vless   cf=-      dl=-      X
+  101/513 🇸🇬_新加坡 (6)           vless   cf=-      dl=-      X
+  102/513 🇸🇬_新加坡 (7)           vless   cf=-      dl=-      X
+  103/513 🇯🇵_日本 (21)           vless   cf=-      dl=-      X
+  104/513 🇯🇵_日本 (24)           vless   cf=-      dl=-      X
+  105/513 🇯🇵_日本 (25)           vless   cf=-      dl=-      X
+  106/513 🇸🇬_新加坡               trojan  cf=559    dl=22     OK
+  107/513 🇯🇵_日本 (8)            vless   cf=-      dl=-      X
+  108/513 🇮🇷_伊朗                vless   cf=-      dl=-      X
+  109/513 🇹🇼_台湾 (10)           vless   cf=3086   dl=7      OK
+  110/513 🇭🇰_香港                trojan  cf=-      dl=-      X
+  111/513 🇭🇰_香港 (2)            trojan  cf=-      dl=-      X
+  112/513 🇭🇰_香港 (3)            trojan  cf=-      dl=-      X
+  113/513 🇯🇵_日本 (12)           vless   cf=-      dl=-      X
+  114/513 🇯🇵_日本 (15)           vless   cf=-      dl=-      X
+  115/513 🇯🇵_日本 (16)           vless   cf=-      dl=-      X
+  116/513 🇭🇰_香港 (5)            trojan  cf=-      dl=-      X
+  117/513 🇩🇪 德国 | DEU #30      vless   cf=-      dl=-      X
+  118/513 🇭🇰 香港 | HKG #3       hysteria2 cf=-      dl=-      X
+  119/513 🇸🇬 新加坡 | SGP #1      ss      cf=-      dl=-      X
+  120/513 🇹🇼TW_1|149KB/s|A004- hysteria2 cf=-      dl=-      X
+  121/513 🇭🇰HK_1|139KB/s|A004- hysteria2 cf=-      dl=-      X
+  122/513 🇸🇬SG_7|72KB/s|M003-2 vless   cf=-      dl=-      X
+  123/513 ❓Other_5|288KB/s|M00 vless   cf=823    dl=34     OK
+  124/513 🇭🇰HK_2|200KB/s [b2d9 hysteria2 cf=-      dl=-      X
+  125/513 🇸🇬SG_11|206KB/s|M003 vless   cf=-      dl=-      X
+  126/513 🇸🇬SG_5|217KB/s|M003- ss      cf=369    dl=88     OK
+  127/513 🇸🇬SG_8|396KB/s|A001- vless   cf=-      dl=-      X
+  128/513 🇸🇬SG_4|227KB/s|M003- ss      cf=-      dl=-      X
+  129/513 🇯🇵_JP_日本_IPV4        trojan  cf=-      dl=-      X
+  130/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  131/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  132/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  133/513 🇯🇵JP日本節點丨yoyapai.com vless   cf=-      dl=-      X
+  134/513 🇯🇵JP日本節點丨yoyapai.com vless   cf=-      dl=-      X
+  135/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  136/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  137/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  138/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  139/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  140/513 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
+  141/513 🇹🇭 Thailand泰国丨yoyapa vless   cf=-      dl=-      X
+  142/513 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
+  143/513 🇯🇵JP日本丨yoyapai.com   vless   cf=-      dl=-      X
+  144/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  145/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  146/513 🇭🇰HK香港節點丨yoyapai.com vless   cf=-      dl=-      X
+  147/513 🇹🇭TH泰國丨yoyapai.com   vless   cf=-      dl=-      X
+  148/513 JP日本丨yoyapai.com     vless   cf=-      dl=-      X
+  149/513 🇰🇷KR韩国丨yoyapai.com   vless   cf=-      dl=-      X
+  150/513 🇮🇳IN印度丨yoyapai.com   vless   cf=-      dl=-      X
+  151/513 🇹🇼TW臺灣丨yoyapai.com   vless   cf=-      dl=-      X
+  152/513 🇰🇷KR韩國丨yoyapai.com   vless   cf=-      dl=-      X
+  153/513 🇭🇰HK香港丨yoyapai.com   vless   cf=-      dl=-      X
+  154/513 🇸🇬SG新加坡丨yoyapai.com  vless   cf=-      dl=-      X
+  155/513 🇻🇳VN越南丨yoyapai.com   vless   cf=-      dl=-      X
+  156/513 🇸🇬SG新加坡丨yoyapai.com  vless   cf=-      dl=-      X
+  157/513 🇦🇪AE阿联酋丨yoyapai.com  vless   cf=-      dl=-      X
+  158/513 TW台湾(mibei77.com 米贝节 vless   cf=2184   dl=15     OK
+  159/513 HK香港(mibei77.com 米贝节 vless   cf=-      dl=-      X
+  160/513 JP日本(mibei77.com 米贝节 vless   cf=-      dl=-      X
+  161/513 🇭🇰HK_17|632KB/s|M003 hysteria2 cf=-      dl=-      X
+  162/513 🇸🇬SG_42|390KB/s|A004 vless   cf=-      dl=-      X
+  163/513 🇰🇷KR_17|629KB/s|M003 hysteria2 cf=-      dl=-      X
+  164/513 🇭🇰HK_34|131KB/s|M003 vless   cf=-      dl=-      X
+  165/513 🇹🇼TW_7|514KB/s|A004- hysteria2 cf=-      dl=-      X
+  166/513 🇸🇬SG_24|827KB/s|M003 ss      cf=373    dl=88     OK
+  167/513 🇯🇵JP_14|74KB/s|A004- hysteria2 cf=-      dl=-      X
+  168/513 🇰🇷KR_3|309KB/s|M003- hysteria2 cf=-      dl=-      X
+  169/513 🇸🇬SG_31|476KB/s|A004 vless   cf=-      dl=-      X
+  170/513 🇸🇬SG_51|991KB/s|M003 ss      cf=-      dl=-      X
+  171/513 🇭🇰HK_36|213KB/s|M003 vless   cf=5000   dl=4      OK
+  172/513 🇯🇵JP_13|530KB/s|A004 vless   cf=366    dl=121    OK
+  173/513 🇰🇷KR_30|636KB/s|M003 hysteria2 cf=-      dl=-      X
+  174/513 🇸🇬SG_56|554KB/s|M003 hysteria2 cf=-      dl=-      X
+  175/513 🇰🇷KR_15|468KB/s|A004 trojan  cf=508    dl=82     OK
+  176/513 🇸🇬SG_39|639KB/s|F003 vless   cf=-      dl=-      X
+  177/513 🇯🇵JP_1|352KB/s|R002- hysteria2 cf=-      dl=-      X
+  178/513 🇰🇷KR_1|464KB/s|A004- ss      cf=337    dl=17     OK
+  179/513 🇯🇵JP_30|511KB/s|M003 vless   cf=186    dl=157    OK
+  180/513 🇸🇬SG_37|227KB/s|M003 vless   cf=-      dl=-      X
+  181/513 🇹🇼TW_21|492KB/s|A004 hysteria2 cf=-      dl=-      X
+  182/513 🇸🇬SG_14|942KB/s|A004 hysteria2 cf=-      dl=-      X
+  183/513 🇦🇺AU_1|485KB/s|A004- trojan  cf=-      dl=-      X
+  184/513 🇸🇬SG_54|816KB/s|B007 vless   cf=560    dl=68     OK
+  185/513 🇯🇵JP_24|641KB/s|M003 vless   cf=370    dl=119    OK
+  186/513 🇭🇰HK_19|325KB/s|A001 hysteria2 cf=-      dl=-      X
+  187/513 🇯🇵JP_18|611KB/s|C002 trojan  cf=1385   dl=10     OK
+  188/513 🇸🇬SG_57|501KB/s|M003 hysteria2 cf=-      dl=-      X
+  189/513 🇸🇬SG_32|371KB/s|A004 vless   cf=741    dl=59     OK
+  190/513 🇸🇬SG_22|412KB/s [82d vless   cf=-      dl=-      X
+  191/513 🇰🇷KR_7|350KB/s|A004- hysteria2 cf=-      dl=-      X
+  192/513 🇸🇬SG_53|932KB/s|B007 ss      cf=-      dl=-      X
+  193/513 🇦🇺AU_6|592KB/s|M003- hysteria2 cf=-      dl=-      X
+  194/513 🇯🇵JP_27|653KB/s|B007 ss      cf=-      dl=-      X
+  195/513 🇦🇺AU_7|578KB/s|M003- hysteria2 cf=-      dl=-      X
+  196/513 🇰🇷KR_21|613KB/s|M003 trojan  cf=-      dl=-      X
+  197/513 🇯🇵JP_19|664KB/s|B007 vless   cf=-      dl=-      X
+  198/513 🇸🇬SG_50|589KB/s|M003 hysteria2 cf=-      dl=-      X
+  199/513 🇭🇰HK_29|478KB/s|A004 hysteria2 cf=-      dl=-      X
+  200/513 🇹🇼TW_38|88KB/s|F003- vless   cf=-      dl=-      X
+  201/513 🇭🇰HK_5|595KB/s|R002- hysteria2 cf=-      dl=-      X
+  202/513 🇹🇼TW_37|205KB/s|R002 vless   cf=-      dl=-      X
+  203/513 🇰🇷KR_2|213KB/s|M001- ss      cf=383    dl=16     OK
+  204/513 🇭🇰HK_37|738KB/s|S004 vless   cf=4944   dl=101    OK
+  205/513 🇯🇵JP_10|144KB/s|M003 ss      cf=250    dl=47     OK
+  206/513 🇰🇷KR_10|738KB/s|A004 hysteria2 cf=-      dl=-      X
+  207/513 🇸🇬SG_48|106KB/s|M003 vless   cf=3500   dl=5      OK
+  208/513 🇸🇬SG_52|479KB/s|A001 ss      cf=-      dl=-      X
+  209/513 🇭🇰 香港 | HKG 2        ss      cf=-      dl=-      X
+  210/513 🇯🇵 日本 | JPN          ss      cf=-      dl=-      X
+  211/513 🇯🇵 日本 | JPN 2        ss      cf=-      dl=-      X
+  212/513 🇯🇵 Rose—46           ss      cf=-      dl=-      X
+  213/513 🇦🇺 Rose—54           ss      cf=-      dl=-      X
+  214/513 🇮🇳 Rose—62           ss      cf=-      dl=-      X
+  215/513 🇸🇬 Rose—80           ss      cf=-      dl=-      X
+  216/513                      vmess   cf=-      dl=-      X
+  217/513                      vmess   cf=-      dl=-      X
+  218/513                      vmess   cf=-      dl=-      X
+  219/513                      vmess   cf=-      dl=-      X
+  220/513                      vmess   cf=-      dl=-      X
+  221/513 🔥Join+Telegram:@Fara ss      cf=378    dl=76     OK
+  222/513 🔥Join+Telegram:@Fara ss      cf=-      dl=-      X
+  223/513 🇸🇬SG_50|960KB/s|M003 vless   cf=715    dl=70     OK
+  224/513 🇰🇷KR_38|538KB/s|M003 trojan  cf=541    dl=73     OK
+  225/513 🇸🇬SG_41|432KB/s|A004 vless   cf=1564   dl=30     OK
+  226/513 🇦🇺AU_9|543KB/s|M003- hysteria2 cf=-      dl=-      X
+  227/513 🇸🇬SG_54|506KB/s|M003 hysteria2 cf=-      dl=-      X
+  228/513 🇦🇺AU_10|598KB/s|M003 hysteria2 cf=-      dl=-      X
+  229/513 🇭🇰HK_87|646KB/s|S004 vless   cf=576    dl=34     OK
+  230/513 🇸🇬SG_29|866KB/s|M003 trojan  cf=-      dl=-      X
+  231/513 🇯🇵JP_25|289KB/s|R002 vless   cf=491    dl=107    OK
+  232/513 🇭🇰HK_91|638KB/s|M003 vless   cf=527    dl=108    OK
+  233/513 🇸🇬SG_30|203KB/s|M003 hysteria2 cf=-      dl=-      X
+  234/513 🇰🇷KR_37|524KB/s|C002 trojan  cf=533    dl=73     OK
+  235/513 🇩🇪DE_106|775KB/s|B00 ss      cf=-      dl=-      X
+  236/513 🇯🇵JP_19|696KB/s|M003 hysteria2 cf=-      dl=-      X
+  237/513 🇦🇺AU_6|335KB/s|M003- vless   cf=757    dl=68     OK
+  238/513 🇯🇵JP_26|377KB/s|M003 vless   cf=-      dl=-      X
+  239/513 🇰🇷KR_42|492KB/s|M003 vless   cf=598    dl=87     OK
+  240/513 🇭🇰HK_90|315KB/s|M003 vless   cf=-      dl=-      X
+  241/513 🇸🇬SG_43|90KB/s|M003- vless   cf=-      dl=-      X
+  242/513 🇦🇺AU_2|492KB/s|R002- hysteria2 cf=-      dl=-      X
+  243/513 🇰🇷KR_40|503KB/s|B007 vless   cf=448    dl=101    OK
+  244/513 🇸🇬SG_56|737KB/s|A004 vless   cf=804    dl=75     OK
+  245/513 PRX11 | @proxystore1 vless   cf=-      dl=-      X
+  246/513 🇸🇬 https://t.me/Conf ss      cf=3289   dl=11     OK
+  247/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  248/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  249/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  250/513 🇮🇳 https://t.me/Conf vless   cf=1010   dl=13     OK
+  251/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  252/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  253/513 🇦🇺 https://t.me/Conf vless   cf=-      dl=-      X
+  254/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  255/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  256/513 🇸🇬 https://t.me/Conf vless   cf=561    dl=41     OK
+  257/513 🇯🇵 https://t.me/Conf vless   cf=5001   dl=8      OK
+  258/513 🇯🇵 https://t.me/Conf vless   cf=5001   dl=24     OK
+  259/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  260/513 🇭🇰 https://t.me/Conf vless   cf=919    dl=23     OK
+  261/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  262/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  263/513 🇮🇳 https://t.me/Conf vless   cf=1967   dl=17     OK
+  264/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  265/513 🌐 https://t.me/Confi vless   cf=-      dl=-      X
+  266/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  267/513 🇻🇳 https://t.me/Conf vless   cf=-      dl=-      X
+  268/513 🇹🇼 https://t.me/Conf trojan  cf=-      dl=-      X
+  269/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  270/513 🇸🇬 https://t.me/Conf vless   cf=5001   dl=11     OK
+  271/513 🌐 https://t.me/Confi hysteria2 cf=1589   dl=31     OK
+  272/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  273/513 🇮🇩 https://t.me/Conf trojan  cf=-      dl=-      X
+  274/513 🇭🇰 https://t.me/Conf vless   cf=661    dl=14     OK
+  275/513 🌐 https://t.me/Confi vless   cf=-      dl=-      X
+  276/513 🌐 https://t.me/Confi vless   cf=-      dl=-      X
+  277/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  278/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  279/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  280/513 🇭🇰 https://t.me/Conf vless   cf=1157   dl=8      OK
+  281/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  282/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  283/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  284/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  285/513 🇻🇳 https://t.me/Conf vless   cf=-      dl=-      X
+  286/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  287/513 🇸🇬 https://t.me/Conf ss      cf=-      dl=-      X
+  288/513 🇯🇵 https://t.me/Conf vless   cf=2044   dl=13     OK
+  289/513 🇯🇵 https://t.me/Conf vless   cf=5001   dl=7      OK
+  290/513 🇸🇬 https://t.me/Conf vless   cf=-      dl=-      X
+  291/513 🇰🇷 https://t.me/Conf vless   cf=3562   dl=7      OK
+  292/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  293/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  294/513 🇯🇵 https://t.me/Conf vless   cf=5001   dl=-      X
+  295/513 🇯🇵 https://t.me/Conf vless   cf=5001   dl=10     OK
+  296/513 🇯🇵 https://t.me/Conf vless   cf=-      dl=-      X
+  297/513 🇭🇰 https://t.me/Conf vless   cf=4292   dl=9      OK
+  298/513 🇭🇰 https://t.me/Conf vless   cf=-      dl=-      X
+  299/513 🇭🇰 https://t.me/Conf hysteria2 cf=-      dl=-      X
+  300/513 🇸🇬 https://t.me/Conf hysteria2 cf=-      dl=-      X
+  301/513 🇸🇬 https://t.me/Conf ss      cf=373    dl=16     OK
+  302/513 🇯🇵 JP | 47.91.16.50  ss      cf=251    dl=7      OK
+  303/513 🇸🇬 SG | 172.236.145. vless   cf=552    dl=72     OK
+  304/513 🏴‍☠️ UN | mohandesss vless   cf=-      dl=-      X
+  305/513 🇹🇼 TW | 59.125.69.22 vless   cf=-      dl=-      X
+  306/513 undefined HK | 45.19 vless   cf=-      dl=-      X
+  307/513 undefined HK | 82.24 vless   cf=-      dl=-      X
+  308/513 🇨🇳 CN | 118.145.129. vless   cf=-      dl=-      X
+  309/513 v2go | 🇯🇵 JP | VLESS vless   cf=3960   dl=7      OK
+  310/513 v2go | 🇵🇭 PH | VLESS vless   cf=-      dl=-      X
+  311/513 v2go | 🇯🇵 JP | VLESS vless   cf=-      dl=-      X
+  312/513 v2go | 🇻🇳 VN | VLESS vless   cf=-      dl=-      X
+  313/513 v2go | 🇭🇰 HK | VLESS vless   cf=-      dl=-      X
+  314/513 v2go | 🇸🇬 SG | VLESS vless   cf=-      dl=-      X
+  315/513 v2go | 🇭🇰 HK | VLESS vless   cf=3401   dl=-      X
+  316/513 [🛜] @Firmfox [23-817 vless   cf=-      dl=-      X
+  317/513                      vmess   cf=-      dl=-      X
+  318/513                      vmess   cf=-      dl=-      X
+  319/513 🇦🇺AU-103.224.212.216 trojan  cf=-      dl=-      X
+  320/513 hamedp71::🇸🇬         vless   cf=-      dl=-      X
+  321/513                      vmess   cf=-      dl=-      X
+  322/513                      vmess   cf=-      dl=-      X
+  323/513                      vmess   cf=-      dl=-      X
+  324/513 🇦🇺AU-103.224.212.216 trojan  cf=-      dl=-      X
+  325/513                      vmess   cf=-      dl=-      X
+  326/513 🇸🇬SG-15.235.197.4-79 trojan  cf=-      dl=-      X
+  327/513 hamedp71::🇸🇬         vless   cf=-      dl=-      X
+  328/513                      vmess   cf=-      dl=-      X
+  329/513 @B2Hub               vless   cf=-      dl=-      X
+  330/513 🇸🇬SG-51.79.161.232-7 ss      cf=-      dl=-      X
+  331/513 🇦🇺AU-45.79.238.129-7 ss      cf=-      dl=-      X
+  332/513 🇸🇬SG-3.0.148.195-299 ss      cf=-      dl=-      X
+  333/513 🇸🇬SG-54.254.129.246- ss      cf=-      dl=-      X
+  334/513 🇯🇵JP-153.125.148.41- trojan  cf=-      dl=-      X
+  335/513 🇦🇺AU-162.4.84.241-48 trojan  cf=-      dl=-      X
+  336/513 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
+  337/513 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
+  338/513 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
+  339/513 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
+  340/513 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
+  341/513 🇸🇬SG-188.253.12.15-1 trojan  cf=-      dl=-      X
+  342/513 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
+  343/513 🇸🇬SG-188.253.12.15-0 trojan  cf=-      dl=-      X
+  344/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  345/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  346/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  347/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  348/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  349/513 🇸🇬SG-188.253.12.90-0 trojan  cf=-      dl=-      X
+  350/513 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
+  351/513 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
+  352/513 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
+  353/513 🇸🇬SG-188.253.12.91-0 trojan  cf=-      dl=-      X
+  354/513 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
+  355/513 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
+  356/513 🇸🇬SG-188.253.12.92-0 trojan  cf=-      dl=-      X
+  357/513 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
+  358/513 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
+  359/513 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
+  360/513 🇸🇬SG-188.253.12.93-1 trojan  cf=-      dl=-      X
+  361/513 🇸🇬SG-188.253.12.93-0 trojan  cf=-      dl=-      X
+  362/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  363/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  364/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  365/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  366/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  367/513 🇸🇬SG-188.253.12.94-0 trojan  cf=-      dl=-      X
+  368/513 🇮🇳IN-152.67.160.174- trojan  cf=-      dl=-      X
+  369/513 🇯🇵JP-64.118.146.255- trojan  cf=-      dl=-      X
+  370/513 🇦🇺AU-103.224.212.210 trojan  cf=-      dl=-      X
+  371/513 🇰🇷KR-144.24.72.126-3 trojan  cf=-      dl=-      X
+  372/513 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
+  373/513 🇦🇺AU-103.224.212.211 trojan  cf=-      dl=-      X
+  374/513 🇦🇺AU-103.224.212.211 trojan  cf=-      dl=-      X
+  375/513 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
+  376/513 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
+  377/513 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
+  378/513 🏁RELAY-104.21.91.112 trojan  cf=-      dl=-      X
+  379/513 🏁RELAY-172.67.215.25 trojan  cf=-      dl=-      X
+  380/513 🇩🇪DE-157.90.33.73-58 trojan  cf=-      dl=-      X
+  381/513 🇰🇷KR-221.155.202.236 trojan  cf=-      dl=-      X
+  382/513 🇰🇷KR-221.155.195.131 trojan  cf=-      dl=-      X
+  383/513 🇰🇷KR-221.155.195.131 trojan  cf=-      dl=-      X
+  384/513 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
+  385/513 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
+  386/513 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
+  387/513 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
+  388/513 🇹🇼TW-220.128.128.151 trojan  cf=-      dl=-      X
+  389/513 🇹🇼TW-60.250.80.31-31 trojan  cf=-      dl=-      X
+  390/513 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
+  391/513 🇹🇼TW-220.128.135.193 trojan  cf=-      dl=-      X
+  392/513 🇹🇼TW-60.250.152.229- trojan  cf=-      dl=-      X
+  393/513 🇹🇼TW-60.250.80.130-3 trojan  cf=-      dl=-      X
+  394/513 🇹🇼TW-60.250.80.31-33 trojan  cf=-      dl=-      X
+  395/513 🇹🇼TW-60.250.152.229- trojan  cf=-      dl=-      X
+  396/513 🇯🇵JP-152.175.38.59-3 trojan  cf=-      dl=-      X
+  397/513 🇯🇵JP-152.175.38.171- trojan  cf=-      dl=-      X
+  398/513 🇯🇵JP-152.175.38.179- trojan  cf=-      dl=-      X
+  399/513 🇯🇵JP-152.175.38.29-3 trojan  cf=-      dl=-      X
+  400/513 🇯🇵JP-152.175.38.67-3 trojan  cf=-      dl=-      X
+  401/513 🇯🇵JP-152.175.38.196- trojan  cf=-      dl=-      X
+  402/513 🇯🇵JP-152.175.38.197- trojan  cf=-      dl=-      X
+  403/513 🇯🇵JP-152.175.38.59-3 trojan  cf=-      dl=-      X
+  404/513 🇭🇰HK-119.246.1.143-1 trojan  cf=-      dl=-      X
+  405/513 🇸🇬SG-91.243.81.248-5 trojan  cf=-      dl=-      X
+  406/513 🇯🇵JP-18.179.31.199-5 trojan  cf=-      dl=-      X
+  407/513 🇭🇰HK-219.76.13.181-0 trojan  cf=-      dl=-      X
+  408/513 🇸🇬SG-172.104.51.247- trojan  cf=-      dl=-      X
+  409/513 🇯🇵JP-154.31.114.10-0 trojan  cf=-      dl=-      X
+  410/513 🇭🇰HK-20.187.85.198-4 trojan  cf=-      dl=-      X
+  411/513 🇭🇰HK-18.167.36.170-2 trojan  cf=-      dl=-      X
+  412/513 🇰🇷KR-103.133.240.115 trojan  cf=-      dl=-      X
+  413/513 🇸🇬SG-103.25.202.114- trojan  cf=-      dl=-      X
+  414/513 🇭🇰HK-104.253.175.99- trojan  cf=-      dl=-      X
+  415/513 🇯🇵JP-108.160.132.178 trojan  cf=-      dl=-      X
+  416/513 🇰🇷KR-118.218.10.159- trojan  cf=-      dl=-      X
+  417/513 🇯🇵JP-124.156.208.160 trojan  cf=-      dl=-      X
+  418/513 🇰🇷KR-132.226.23.185- trojan  cf=-      dl=-      X
+  419/513 🇯🇵JP-133.18.140.38-0 trojan  cf=-      dl=-      X
+  420/513 🇸🇬SG-139.162.62.195- trojan  cf=-      dl=-      X
+  421/513 🇰🇷KR-146.56.187.1-09 trojan  cf=-      dl=-      X
+  422/513 🇯🇵JP-149.28.21.106-0 trojan  cf=-      dl=-      X
+  423/513 🇯🇵JP-150.230.212.247 trojan  cf=-      dl=-      X
+  424/513 🇰🇷KR-150.230.249.88- trojan  cf=-      dl=-      X
+  425/513 🇯🇵JP-156.246.91.9-07 trojan  cf=-      dl=-      X
+  426/513 🇰🇷KR-158.180.71.69-0 trojan  cf=-      dl=-      X
+  427/513 🇰🇷KR-158.247.199.106 trojan  cf=-      dl=-      X
+  428/513 🇸🇬SG-159.223.41.212- trojan  cf=-      dl=-      X
+  429/513 🇸🇬SG-161.118.213.45- trojan  cf=-      dl=-      X
+  430/513 🇯🇵JP-168.138.212.80- trojan  cf=-      dl=-      X
+  431/513 🇸🇬SG-168.144.109.68- trojan  cf=-      dl=-      X
+  432/513 🇸🇬SG-168.144.96.147- trojan  cf=-      dl=-      X
+  433/513 🇯🇵JP-172.104.120.92- trojan  cf=-      dl=-      X
+  434/513 🇯🇵JP-172.104.80.248- trojan  cf=-      dl=-      X
+  435/513 🇯🇵JP-172.104.81.253- trojan  cf=-      dl=-      X
+  436/513 🇯🇵JP-172.104.86.229- trojan  cf=-      dl=-      X
+  437/513 🇯🇵JP-172.237.13.221- trojan  cf=-      dl=-      X
+  438/513 🇭🇰HK-216.236.38.234- trojan  cf=-      dl=-      X
+  439/513 🇸🇬SG-43.169.19.179-0 trojan  cf=-      dl=-      X
+  440/513 🇭🇰HK-45.38.60.139-10 trojan  cf=-      dl=-      X
+  441/513 🇰🇷KR-54.180.151.15-0 trojan  cf=-      dl=-      X
+  442/513 🇰🇷KR-64.110.70.64-09 trojan  cf=-      dl=-      X
+  443/513 🇭🇰HK-83.229.121.78-5 trojan  cf=-      dl=-      X
+  444/513 🇮🇩ID-103.226.139.201 trojan  cf=-      dl=-      X
+  445/513 🇸🇬SG-18.140.67.76-57 trojan  cf=-      dl=-      X
+  446/513 🇰🇷KR-3.34.6.217-4261 trojan  cf=-      dl=-      X
+  447/513                      vmess   cf=-      dl=-      X
+  448/513                      vmess   cf=-      dl=-      X
+  449/513                      vmess   cf=-      dl=-      X
+  450/513                      vmess   cf=-      dl=-      X
+  451/513                      vmess   cf=-      dl=-      X
+  452/513                      vmess   cf=-      dl=-      X
+  453/513                      vmess   cf=-      dl=-      X
+  454/513 🇮🇳 India - Mumbai |  vless   cf=4310   dl=6      OK
+  455/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  456/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  457/513 🇨🇭 Switzerland - Zur vless   cf=-      dl=-      X
+  458/513 🇲🇩 Moldova - Unknown vless   cf=-      dl=-      X
+  459/513 🇩🇪 Germany - Frankfu vless   cf=-      dl=-      X
+  460/513 🇬🇧 United Kingdom -  vless   cf=-      dl=-      X
+  461/513 🇷🇺 Russia - Moscow | vless   cf=-      dl=-      X
+  462/513 🇷🇺 Russia - St Peter vless   cf=-      dl=-      X
+  463/513 🇸🇬 Singapore - Unkno trojan  cf=-      dl=-      X
+  464/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  465/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  466/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  467/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  468/513 🇸🇬 Singapore - Unkno vless   cf=-      dl=-      X
+  469/513 [165684]             trojan  cf=-      dl=-      X
+  470/513 🇭🇰230910 | ⚡️Telegra trojan  cf=-      dl=-      X
+  471/513                      vless   cf=-      dl=-      X
+  472/513 [freeSub#002] A🟢🇸🇬re trojan  cf=-      dl=-      X
+  473/513 [freeSub#003] C🟠🇭🇰ho trojan  cf=-      dl=-      X
+  474/513 [freeSub#004] A🟢🇲🇾re trojan  cf=-      dl=-      X
+  475/513 [freeSub#005] A🟢🇻🇳re trojan  cf=-      dl=-      X
+  476/513 [freeSub#006] A🟢🇰🇷re trojan  cf=-      dl=-      X
+  477/513 [freeSub#008] D🔴🇯🇵ho trojan  cf=-      dl=-      X
+  478/513 [freeSub#010] A🟢🇻🇳re trojan  cf=-      dl=-      X
+  479/513 [freeSub#011] A🟢🇭🇰re trojan  cf=-      dl=-      X
+  480/513 [freeSub#012] A🟢🇸🇬re trojan  cf=-      dl=-      X
+  481/513 [freeSub#013] D🔴🇸🇬ho trojan  cf=-      dl=-      X
+  482/513 [freeSub#015] C🟠🇯🇵ho trojan  cf=-      dl=-      X
+  483/513 [freeSub#017] A🟢🇻🇳re trojan  cf=-      dl=-      X
+  484/513 [freeSub#020] A🟢🇹🇼re trojan  cf=-      dl=-      X
+  485/513 [freeSub#021] D🔴🇯🇵ho trojan  cf=-      dl=-      X
+  486/513 [freeSub#038] A🟢🇰🇷re trojan  cf=-      dl=-      X
+  487/513 [freeSub#044] U⚪🇭🇰uk trojan  cf=-      dl=-      X
+  488/513 [freeSub#053] A🟢🇰🇷re trojan  cf=-      dl=-      X
+  489/513 [freeSub#078] D🔴🇯🇵ho trojan  cf=-      dl=-      X
+  490/513 [freeSub#091] A🟢🇹🇭re trojan  cf=-      dl=-      X
+  491/513 [freeSub#093] B🟡🇯🇵bu trojan  cf=-      dl=-      X
+  492/513 [freeSub#104] D🔴🇮🇳ho trojan  cf=-      dl=-      X
+  493/513 [freeSub#106] C🟠🇵🇭ho trojan  cf=-      dl=-      X
+  494/513 [freeSub#111] D🔴🇸🇬ho trojan  cf=-      dl=-      X
+  495/513 [NoMoreWalls#074] 🇸🇬 vless   cf=-      dl=-      X
+  496/513 [AutoMerge#005] 新加坡1 hysteria2 cf=-      dl=-      X
+  497/513 [AutoMerge#014] 🇹🇭TH socks5  cf=1066   dl=46     OK
+  498/513 [AutoMerge#024] 🇹🇭TH socks5  cf=1055   dl=45     OK
+  499/513 [AutoMerge#062] 🇰🇷 韩 hysteria2 cf=-      dl=-      X
+  500/513 [AutoMerge#075] 🇸🇬 新 vless   cf=-      dl=-      X
+  501/513 [AutoMerge#076] 🇸🇬 新 hysteria2 cf=-      dl=-      X
+  502/513 [AutoMerge#079] 🇸🇬 新 vless   cf=-      dl=-      X
+  503/513 [zhuhaiuk#008] TH -  socks5  cf=1022   dl=52     OK
+  504/513 [zhuhaiuk#011] TH -  socks5  cf=1021   dl=51     OK
+  505/513 [zhuhaiuk#014] TH -  socks5  cf=1099   dl=52     OK
+  506/513 [zhuhaiuk#018] VN -  socks5  cf=1116   dl=48     OK
+  507/513 [zhuhaiuk#021] HK -  socks5  cf=814    dl=6      OK
+  508/513 [free18#259] 🇯🇵_日本 ( ss      cf=248    dl=4      OK
+  509/513 [ermaozi#010] 🇯🇵[www vless   cf=-      dl=-      X
+  510/513 [ermaozi#012] 🇰🇷[www ss      cf=344    dl=51     OK
+  511/513 [ermaozi#015] 🇭🇰[www trojan  cf=-      dl=-      X
+  512/513 [Eternity#091] 🇰🇷KR- ss      cf=379    dl=11     OK
+  513/513 [Eternity#101] 🇰🇷KR- trojan  cf=-      dl=-      X
 名字已按真实地区纠正
-写入 fail.xyz：389 条（测试失败）
-写入 report.html（105 条，可用 105）
-写入 0070077.xyz：105 条
+写入 fail.xyz：392 条（测试失败）
+写入 report.html（83 条，可用 83）
+写入 0070077.xyz：83 条
